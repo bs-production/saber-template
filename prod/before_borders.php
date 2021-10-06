@@ -10,6 +10,7 @@
     private $thePage;
     private $cmsPageData;
     private $siteTokens;
+    private $proxy = "https://gh-proxy.jsiwicki.workers.dev/?url=";
 
     /**
      * Collections
@@ -64,14 +65,14 @@
     );
     private $devLinks = array(
       // Css files
-      "global.css" => "https://gh-proxy.jsiwicki.workers.dev/?url=https://raw.githubusercontent.com/bs-production/saber-template/master/prod/global.css",
-      "home.css" => "https://gh-proxy.jsiwicki.workers.dev/?url=https://raw.githubusercontent.com/bs-production/saber-template/master/prod/home.css",
-      "content.css" => "https://gh-proxy.jsiwicki.workers.dev/?url=https://raw.githubusercontent.com/bs-production/saber-template/master/prod/content.css",
+      "global.css" => "https://raw.githubusercontent.com/bs-production/saber-template/master/prod/global.css",
+      "home.css" => "https://raw.githubusercontent.com/bs-production/saber-template/master/prod/home.css",
+      "content.css" => "https://raw.githubusercontent.com/bs-production/saber-template/master/prod/content.css",
 
       // JS Files
-      "dev_tools.js" => "https://gh-proxy.jsiwicki.workers.dev/?url=https://raw.githubusercontent.com/bs-production/saber-template/master/prod/dev_tools.js",
-      "home.js" => "https://gh-proxy.jsiwicki.workers.dev/?url=https://raw.githubusercontent.com/bs-production/saber-template/master/prod/home.js",
-      "content.js" => "https://gh-proxy.jsiwicki.workers.dev/?url=https://raw.githubusercontent.com/bs-production/saber-template/master/prod/content.js"
+      "dev_tools.js" => "https://raw.githubusercontent.com/bs-production/saber-template/master/prod/dev_tools.js",
+      "home.js" => "https://raw.githubusercontent.com/bs-production/saber-template/master/prod/home.js",
+      "content.js" => "https://raw.githubusercontent.com/bs-production/saber-template/master/prod/content.js"
     );
     private $prodLinks = array(
       "favicon.ico" => "https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/300/favicon.ico",
@@ -90,7 +91,8 @@
      */
     public $pageType;
     public $isCityPage;
-    public $isDevelopment = true;
+    public $isDev;
+    public $isTest;
 
 
     /**
@@ -111,6 +113,8 @@
       $this->cmsPageData = &$cmsPageData;
       $this->siteTokens = &$siteTokens;
       $this->isCityPage = (strpos($thePage, 'service-area') !== false) && (strpos($thePage, '/') !== false);
+      $this->isDev = (!empty($_GET['dev_template']) && $_GET['dev_template'] == 1) || (!empty($_GET['dev_content']) && $_GET['dev_content'] == 1);
+      $this->isTest = (!empty($_GET['test']) && $_GET['test'] == 1);
 
       $this->handleSetters();
       $this->handleSwitches();
@@ -200,7 +204,7 @@
       // Insert favicon
       $topData .= $this->generateLinkTag($this->prodLinks['favicon.ico'], "icon");
       // Insert CSS reset
-      $topData .= $this->generateLinkTag($this->devLinks['global.css']);
+      $topData .= $this->generateLinkTag($this->proxy . $this->devLinks['global.css']);
 
       // Insert fonts
       $topData .= $this->generateLinkTag($this->prodLinks['fonts.preconnect'], "preconnect");
@@ -209,13 +213,13 @@
       // Page type based injection
       switch($this->pageType) { 
         case "HOME": {
-          $topData .= $this->generateLinkTag($this->devLinks['home.css']);
+          $topData .= $this->generateLinkTag($this->proxy . $this->devLinks['home.css']);
           break;
         }
 
         
         case "CONTENT": {
-          $topData .= $this->generateLinkTag($this->devLinks['content.css']);
+          $topData .= $this->generateLinkTag($this->proxy . $this->devLinks['content.css']);
 
           // Free estimate page requires jquery
           if(strpos($this->thePage, 'free-estimate') !== false) {
@@ -228,7 +232,7 @@
          * to treat it as a CONTENT type
          */
         default: {
-          $topData .= $this->generateLinkTag($this->devLinks['content.css']);
+          $topData .= $this->generateLinkTag($this->proxy . $this->devLinks['content.css']);
         }
       }
 
@@ -241,7 +245,7 @@
       // Page type based injection
       switch($this->pageType) { 
         case "HOME": {
-          $bottomData .= $this->generateScriptTag($this->devLinks['home.js']);
+          $bottomData .= $this->generateScriptTag($this->proxy . $this->devLinks['home.js']);
           break;
         }
 
@@ -251,13 +255,13 @@
          */
         case "CONTENT":
         default: {
-          $bottomData .= $this->generateScriptTag($this->devLinks['content.js']);
+          $bottomData .= $this->generateScriptTag($this->proxy . $this->devLinks['content.js']);
         }
       }
 
       // Insert dev_tools reset
       if($this->isDevelopment) {
-        $bottomData .= $this->generateScriptTag($this->devLinks['dev_tools.js']);
+        $bottomData .= $this->generateScriptTag($this->proxy . $this->devLinks['dev_tools.js']);
       }
 
       $this->siteTokens['[[bottom-inject]]'] = $bottomData;
