@@ -82,6 +82,7 @@
       "fonts.css" => "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800;900&display=swap",
 
       // scripts
+      "embla-carousel.js" => "https://unpkg.com/embla-carousel/embla-carousel.umd.js",
       "jquery.js" => "https://cdn.treehouseinternetgroup.com/cms_core/assets/js/jquery.min.js"
     );
     private $styleHelpers = array(
