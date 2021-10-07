@@ -3,7 +3,7 @@ function InitCredCarousel() {
   const options = {
     loop: true,
   };
-  const Embla = window.EmblaCarousel(carouselNode, options);
+  const Embla = EmblaCarousel(carouselNode, options);
 
   const prevButton = document.querySelector<HTMLButtonElement>(
     ".cred-section .prev-control"
