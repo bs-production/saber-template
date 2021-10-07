@@ -1,13 +1,11 @@
-import { carousel } from "./carousel";
-
 function InitCredCarousel() {
-  const carouselNode = document.querySelector<HTMLDivElement>(".carousel");
+  const carouselNode = document.querySelector<HTMLDivElement>(".cred-wrapper");
 
   const options = {
     loop: true,
   };
 
-  const Embla = carousel(carouselNode, options);
+  const Embla = EmblaCarousel(carouselNode, options);
 
   // Reinit since embla sometimes messes uo the first run
   setTimeout(() => {
