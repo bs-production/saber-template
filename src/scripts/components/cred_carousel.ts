@@ -5,12 +5,8 @@ function InitCredCarousel() {
     loop: true,
   };
 
-  const Embla = EmblaCarousel(carouselNode, options);
-
-  // Reinit since embla sometimes messes uo the first run
-  setTimeout(() => {
-    Embla.reInit();
-  }, 10);
+  console.log("hi");
+  const Embla = window.EmblaCarousel(carouselNode, options);
 }
 
 try {
