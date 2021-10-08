@@ -5,8 +5,6 @@
  * not supported ni Edge 15
  *
  * I'm also accounting for multiple supernavs (clones)
- *
- * TODO: Handle click outside
  */
 
 class MobileNav {
