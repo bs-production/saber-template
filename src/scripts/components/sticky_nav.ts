@@ -34,6 +34,9 @@ class StickyNav {
         pointer-events: none;
         transition: all 100ms ease-in-out;
       }
+      .navigation-clone:not(.sticky-nav-show) .navigation-layout {
+        box-shadow: none !important;
+      }
       .navigation-clone .supernav {
         opacity: 0;
         transition: all 150ms ease-in-out;
