@@ -1,0 +1,44 @@
+<style lang="scss">.social-proof-header{margin-bottom:6rem}@media (max-width:767px){.social-proof-header{margin-bottom:4rem}}.social-proof-header .title{font-size:2.25rem;font-weight:700;line-height:2.5rem;margin-bottom:4rem}@media (max-width:767px){.social-proof-header .title{font-size:1.5rem;line-height:2rem}}@media (max-width:639px){.social-proof-header .title{font-size:1.25rem;line-height:1.75rem}}.social-proof-header .title span:last-of-type{position:relative}.social-proof-header .title span:last-of-type:after{--tw-bg-opacity:1;background-color:rgba(236,30,36,var(--tw-bg-opacity));bottom:-1.5rem;height:.5rem;left:0;position:absolute;width:50%}@media (max-width:639px){.social-proof-header .title span:last-of-type:after{bottom:-1rem}}.social-proof-header .title span:last-of-type:after{content:"";transform:skewX(30deg)}.social-proof-ratings{display:grid;gap:3rem;grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:5rem}@media (max-width:1023px){.social-proof-ratings{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:767px){.social-proof-ratings{gap:1.5rem;grid-template-columns:repeat(1,minmax(0,1fr))}}@media (max-width:639px){.social-proof-ratings{gap:1rem;margin-bottom:3rem}}.social-proof-ratings .rating-item{display:flex}.social-proof-ratings .rating-item>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-left:calc(1.5rem*(1 - var(--tw-space-x-reverse)));margin-right:calc(1.5rem*var(--tw-space-x-reverse))}.social-proof-ratings .rating-item{border-radius:41px;padding:2rem}@media (max-width:639px){.social-proof-ratings .rating-item{display:none;flex-direction:column}.social-proof-ratings .rating-item>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;--tw-space-y-reverse:0;margin:calc(1rem*(1 - var(--tw-space-y-reverse))) calc(0px*var(--tw-space-x-reverse)) calc(1rem*var(--tw-space-y-reverse)) calc(0px*(1 - var(--tw-space-x-reverse)))}.social-proof-ratings .rating-item:first-child{display:block}}.social-proof-ratings .rating-item{box-shadow:0 4px 37px #0000003d}.social-proof-ratings .rating-item .rating-stars{display:grid;grid-template-columns:repeat(6,auto);grid-template-rows:repeat(2,minmax(0,1fr));justify-content:center}.social-proof-ratings .rating-item .rating-stars img,.social-proof-ratings .rating-item .rating-stars svg{height:2.5rem;margin-bottom:-.125rem;margin-top:-.125rem;-o-object-fit:contain;object-fit:contain;width:2.5rem}.social-proof-ratings .rating-item .rating-stars img:first-child,.social-proof-ratings .rating-item .rating-stars svg:first-child{grid-column:span 2/span 2;grid-column-start:2;grid-row-start:1}.social-proof-ratings .rating-item .rating-stars img:nth-child(2),.social-proof-ratings .rating-item .rating-stars svg:nth-child(2){grid-column:span 2/span 2;grid-row-start:1}.social-proof-ratings .rating-item .rating-stars img:nth-child(3),.social-proof-ratings .rating-item .rating-stars img:nth-child(4),.social-proof-ratings .rating-item .rating-stars img:nth-child(5),.social-proof-ratings .rating-item .rating-stars svg:nth-child(3),.social-proof-ratings .rating-item .rating-stars svg:nth-child(4),.social-proof-ratings .rating-item .rating-stars svg:nth-child(5){grid-column:span 2/span 2;grid-row-start:2}.social-proof-ratings .rating-item .rating-content .rating-content-body{-webkit-box-orient:vertical;-webkit-line-clamp:2;display:block;display:-webkit-box;font-weight:500;margin-bottom:1.25rem;overflow:hidden}.social-proof-ratings .rating-item .rating-content .rating-content-body:hover{text-decoration:underline}.social-proof-ratings .rating-item .rating-content .rating-content-client{-webkit-box-orient:vertical;-webkit-line-clamp:1;display:-webkit-box;font-size:.875rem;font-weight:700;line-height:1.25rem;overflow:hidden}.social-proof-action{display:flex;justify-content:center}</style>
+
+<div>
+  <div class="social-proof-header">
+    <h2 class="title">
+      <span>Saber Foundation Repair</span>
+
+      <br>
+
+      <span>Reviews and Ratings</span>
+    </h2>
+  </div>
+
+  <div class="social-proof-ratings">
+    <!-- ITEM START -->
+    <each loop='item in [1,2,3]'>
+      <div class="rating-item">
+        <div class="rating-stars">
+          <each loop="item in [1,2,3,4,5]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="rating">
+              <path fill="none" d="M0 0h24v24H0z"></path>
+    
+              <path fill="currentColor" d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z"></path>
+            </svg>
+          </each>
+        </div>
+  
+        <div class="rating-content">
+          <a class="rating-content-body" href="/">
+            "Would give Alvin and his crew 10 stars if possible!" asdh aisudg
+                iausgd a gdayg dkuasyg d
+          </a>
+          <div class="rating-content-client">Charles F from San Pedro, CA</div>
+        </div>
+      </div>
+    </each>
+    <!-- ITEM END -->
+
+  </div>
+
+  <div class="social-proof-action">
+    <a class="button">View More Reviews</a>
+  </div>
+</div>
