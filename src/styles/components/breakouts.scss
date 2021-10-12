@@ -2,7 +2,7 @@
 
 .breakout.breakout.breakout {
   // Got this from the old system
-  width: 300px;
+  max-width: 300px;
 
   @screen sm {
     max-width: 100% !important;
@@ -24,20 +24,6 @@
   > img,
   > iframe {
     @apply p-0;
-
-    // Nagate bottom border radius when there is content below it
-    &:not(:only-child):first-child {
-      @apply rounded-b-none w-full;
-
-      // Images can be single children of links
-      img:only-child {
-        @apply rounded-b-none w-full;
-      }
-
-      & > a:only-child img {
-        @apply rounded;
-      }
-    }
   }
 
   img {
