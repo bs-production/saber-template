@@ -7,7 +7,7 @@
 */
 
 @mixin base-button {
-  @apply inline-block px-10 py-3 font-bold text-white rounded-full rounded-tl-none no-underline cursor-pointer bg-primary hover:opacity-90 text-center;
+  @apply inline-block px-10 py-3 font-bold text-white rounded-full rounded-tl-none no-underline cursor-pointer bg-primary hover:bg-opacity-90 text-center;
 }
 .button.button.button,
 .arrow-button.arrow-button.arrow-button {
