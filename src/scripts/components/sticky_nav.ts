@@ -41,7 +41,7 @@ class StickyNav {
         opacity: 0;
         transition: all 150ms ease-in-out;
       }
-      .navigation-clone .banner-text {
+      .navigation-clone .banner {
         pointer-events: auto;
       }
       .navigation-clone .logo-container {
@@ -80,7 +80,7 @@ class StickyNav {
    */
   private _createCompansatingStyles() {
     const defaultTopStyle = 16;
-    const navHeight = 72;
+    const navHeight = 42;
 
     let stylesToInsert = ``;
 
