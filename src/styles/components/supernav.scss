@@ -3,7 +3,7 @@
 
   .level-1.large {
     @apply flex justify-end md:hidden space-x-16
-      lg:space-x-8;
+      lg:space-x-6;
 
     > li {
       @apply font-semibold relative py-4 lg:text-sm;
@@ -16,10 +16,11 @@
         // @apply hover:underline;
       }
 
-      &.free-estimate {
+      &.free-estimate.free-estimate.free-estimate {
         flex-shrink: 0;
         a {
-          @apply bg-primary px-12 py-4 font-bold text-white rounded-full rounded-tl-none;
+          @apply bg-primary px-12 py-4 font-bold text-white rounded-full rounded-tl-none
+            lg:px-8;
         }
       }
 
