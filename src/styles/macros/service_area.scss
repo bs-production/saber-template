@@ -1,6 +1,6 @@
 #gmap-wrap {
   $gmap-size: 350;
-  @apply float-right relative rounded-md overflow-hidden w-[#{$gmap-size}px] h-[#{$gmap-size}px]
+  @apply float-right relative overflow-hidden w-[#{$gmap-size}px] h-[#{$gmap-size}px]
     sm:float-none sm:w-full;
 
   .gm-style {
@@ -18,7 +18,7 @@
     }
 
     &.service_area_header {
-      @apply bg-gray-900 text-white font-bold rounded-t-md;
+      @apply bg-gray-900 text-white font-bold;
 
       .service_area_cell {
         @apply text-base;
