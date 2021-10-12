@@ -54,7 +54,7 @@
     }
 
     .number {
-      @apply font-bold text-xl
+      @apply font-bold text-xl hover:underline
         sm:hidden;
     }
   }
