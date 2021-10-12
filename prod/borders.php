@@ -26,7 +26,7 @@
         <div class="banner">
           <span class="serving"> Yes, We Serve This Area </span>
 
-          <span class="number"> 1-800-922-2488 </span>
+          <a class="number"> 1-800-922-2488 </a>
         </div>
 
         <!-- Super nav -->
@@ -481,20 +481,20 @@
       </section>
 
       <? elseif($siteConfig->pageType === "CONTENT"): ?>
-      <? if($siteConfig->showContentHeader): ?>
-      <section class="content-template-header space-section">
-        <div class="bg-container">
-          <div class="bg-img">
-            [[content-header-img]]
+        <? if($siteConfig->showContentHeader): ?>
+        <section class="content-template-header space-section">
+          <div class="bg-container">
+            <div class="bg-img">
+              [[content-header-img]]
+            </div>
+            <div class="bg-overlay"></div>
           </div>
-          <div class="bg-overlay"></div>
-        </div>
 
-        <div class="template-header-title">
-          <h1>[[content-header-title]]</h1>
-        </div>
-      </section>
-      <? endif; ?>
+          <div class="template-header-title">
+            <h1>[[content-header-title]]</h1>
+          </div>
+        </section>
+        <? endif; ?>
 
       <section
         class="content-template-article space-section <?= $siteConfig->showSilo ? "" : 'no-silo'; ?> <?= $siteConfig->showBreadcrumbs ? "" : 'no-breadcrumbs'; ?>"
