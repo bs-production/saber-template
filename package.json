@@ -1,9 +1,10 @@
 {
-  "name": "the_basement_doctor_template",
+  "name": "saber_template",
   "version": "1.0.0",
-  "description": "Template for the basement doctor website",
+  "description": "Template for the saber basements",
   "author": "Stephan Burger",
   "license": "MIT",
+  "browserslist": "cover 99.8%, last 3 versions, not dead",
   "scripts": {
     "parcel:serve": "parcel serve src/html/pages/*.html",
     "parcel:watch": "parcel watch src/html/pages/*.html",
