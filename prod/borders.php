@@ -30,7 +30,7 @@
         <div class="banner">
           <span class="serving"> Yes, We Serve This Area </span>
 
-          <a class="number"> 1-800-922-2488 </a>
+          <a class="number" href="tel:[[phone]]">[[phone]]</a>
         </div>
 
         <!-- Super nav -->
@@ -252,7 +252,7 @@
       </section>
 
       <!-- Social Proof Section -->
-      <section class="social-proof space-section">
+      <!-- <section class="social-proof space-section">
         <div class="social-proof-header">
           <h2 class="title">
             <span>Saber Foundation Repair</span>
@@ -388,7 +388,7 @@
         <div class="social-proof-action">
           <a class="button">View More Reviews</a>
         </div>
-      </section>
+      </section> -->
 
       <!-- About Section -->
       <section class="about-section space-section">
@@ -434,7 +434,7 @@
       </section>
 
       <!-- Before After Section -->
-      <section class="before-after-section space-section">
+      <!-- <section class="before-after-section space-section">
         <div class="before-after-header-container">
           <h2 class="header">Recent Projects in Southern CA</h2>
         </div>
@@ -482,7 +482,7 @@
         <div class="before-after-action-container">
           <a class="button">View More Before & After Photos</a>
         </div>
-      </section>
+      </section> -->
 
       <? elseif($siteConfig->pageType === "CONTENT"): ?>
         <? if($siteConfig->showContentHeader): ?>
@@ -639,9 +639,9 @@
         
         <div class="large-5 large-pull-7 columns">
           <div id="footer-contact">
-            <a href="/free-estimate.html" id="footer-btn">contact us</a>
+            <a href="/free-estimate.html" id="footer-btn" class="button">contact us</a>
             <p class="footer-phone">Or call us at
-              <span><a href="tel:<?= $phonenumber; ?>" class="phone_link">[phone]</a></span>
+              <span><a href="tel:[[phone]]" class="phone_link">[phone]</a></span>
             </p>
             <p class="footer-address"> [[display_addresses]] </p>
             <p>[license number]</p>  
