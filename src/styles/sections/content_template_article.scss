@@ -175,7 +175,7 @@ $silo-width: 275;
   }
 
   .content-template-main {
-    @apply col-start-2 col-end-3 row-start-2 row-end-3 prose max-w-full overflow-hidden
+    @apply col-start-2 col-end-3 row-start-2 row-end-3 prose max-w-full relative
       lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4
       md:prose-sm;
 
