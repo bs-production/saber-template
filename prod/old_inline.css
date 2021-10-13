@@ -1,0 +1,44 @@
+/**------------------------------------------- Structure Styles -------------------------------------------**/
+body {
+  background-color: #373737;
+}
+.row {
+  max-width: 1060px;
+  position: relative;
+}
+#colorbox,
+#cboxLoadedContent,
+#cboxContent {
+  box-sizing: content-box;
+}
+.container {
+  background-color: #fff;
+  position: relative;
+}
+a,
+#tabs .ui-widget-content a,
+#tabs .ui-state-active a,
+#tabs .ui-state-active a:link,
+#tabs-light-bar .ui-widget-content a {
+  color: #d50208;
+}
+a:hover {
+  color: #ff0207;
+}
+a:visited {
+  color: #797979;
+}
+/**------------------------------------------- Font Styles -------------------------------------------**/
+body,
+h2,
+p,
+ul,
+ol {
+  font-family: "Montserrat", Arial, sans-serif;
+}
+h1,
+h3,
+h4,
+strong {
+  font-family: "Montserrat", sans-serif;
+}
