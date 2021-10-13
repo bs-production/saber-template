@@ -1,0 +1,47 @@
+.slick-slider.slick-slider.slick-slider {
+  position: relative;
+  max-width: none;
+  width: auto;
+  display: grid;
+
+  .slick-list {
+    position: relative;
+    overflow: hidden;
+
+    .slick-track {
+      position: relative;
+    }
+  }
+
+  .slick-dots {
+    list-style: none;
+    text-align: center;
+
+    li {
+      position: relative;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin: 0 5px;
+      padding: 0;
+      cursor: pointer;
+
+      &.active {
+      }
+
+      button {
+        font-size: 0;
+        line-height: 0;
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 5px;
+        cursor: pointer;
+        color: transparent;
+        border: 0;
+        outline: 0;
+        background: 0 0;
+      }
+    }
+  }
+}
