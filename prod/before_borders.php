@@ -312,6 +312,7 @@
       $topNav->superMode = 'top';
       $topNav->superItems = array(
         'Services' => array(
+            'class' => 'columned',
             'target' => 'services'
         ),
         'Our Work' => array(
@@ -325,7 +326,7 @@
             'target' => 'map',
         ),
         'Free Estimate*' => array(
-            'class' => 'quote',
+            'class' => 'free-estimate',
             'target' => 'contact'
         ));
 
