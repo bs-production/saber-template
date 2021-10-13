@@ -49,19 +49,11 @@
       "free-estimate"
     );
     private $contentHeaderImages = array(
-      // Will add links when transfer happens (Not 1-to-1 mapping of services in devsite)
-      // "about-us",
-      // "basement-waterproofing",
-      // "commercial-foundation-contractor",
-      // "seismic",
-      // "foundation-repair",
-      // "concrete-lifting",
-      // "crawl-space-repair",
-      // "sump-pump",
-      // "radon-gas-mitigation",
-      // "flood-vents",
-      // "service-area",
-      "default" => "https://www.saberfoundations.com/core/images/templates/health/headers/wall-crack-silo-test.jpg"
+      "basement-waterproofing" => "https://www.saberfoundations.com/core/images/templates/health/headers/waterproofing-silo-test.jpg",
+      "commercial-foundation-contractor" => "https://www.saberfoundations.com/core/images/templates/health/headers/commercial-silo-test.jpg",
+      "foundation-repair" => "https://www.saberfoundations.com/core/images/templates/health/headers/foundation-silo-test.jpg",
+      "crawl-space-repair" => "https://www.saberfoundations.com/core/images/templates/health/headers/crawl-silo-test.jpg",
+      "default" => "https://www.saberfoundations.com/core/images/templates/health/headers/wall-crack-silo-test.jpg",
     );
     private $devLinks = array(
       // Css files
@@ -139,7 +131,7 @@
     private function set_pageType() {
       if($this->thePage == "index") {
         $this->pageType = 'HOME';
-      } else if($this->substr_in_array($macroPages, $thePage)) {
+      } else if($this->substr_in_array($this->modulePages, $this->thePage)) {
         $this->pageType = 'CONTENT';
       } else {
         // This should be UKNOWN
@@ -366,11 +358,22 @@
       // Only when content header is needed
       if($this->showContentHeader) {
         switch(true) {
-          // Example implementation (There isn't a 1-to-1 mapping to saber from the dev site):
-          // case stristr($this->thePage,"about-us"): {
-          //   $content = $this->generateImageTag($this->contentHeaderImages['about-us'], "img object-cover-");
-          //   break;
-          // }
+          case stristr($this->thePage,"basement-waterproofing"): {
+            $content = $this->generateImageTag($this->contentHeaderImages['basement-waterproofing'], "img object-cover-");
+            break;
+          }
+          case stristr($this->thePage,"commercial-foundation-contractor"): {
+            $content = $this->generateImageTag($this->contentHeaderImages['commercial-foundation-contractor'], "img object-cover-");
+            break;
+          }
+          case stristr($this->thePage,"foundation-repair"): {
+            $content = $this->generateImageTag($this->contentHeaderImages['foundation-repair'], "img object-cover-");
+            break;
+          }
+          case stristr($this->thePage,"crawl-space-repair"): {
+            $content = $this->generateImageTag($this->contentHeaderImages['crawl-space-repair'], "img object-cover-");
+            break;
+          }
           default: {
             $content = $this->generateImageTag($this->contentHeaderImages['default'], "img object-cover-");
           }
