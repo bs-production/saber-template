@@ -1,6 +1,10 @@
 <?php
   global $thePage, $cmsPageData, $siteTokens;
   $siteConfig = new SiteConfig($thePage, $csmPageData, $siteTokens);
+
+  if ($thePage == 'index') {
+    $cmsPageData['page.body_content'] = '';
+  }
 ?>
 
 <!DOCTYPE html>
@@ -637,7 +641,7 @@
           <div id="footer-contact">
             <a href="/free-estimate.html" id="footer-btn">contact us</a>
             <p class="footer-phone">Or call us at
-              <span><a href="tel:<?php echo $phonenumber; ?>" class="phone_link">[phone]</a></span>
+              <span><a href="tel:<?= $phonenumber; ?>" class="phone_link">[phone]</a></span>
             </p>
             <p class="footer-address"> [[display_addresses]] </p>
             <p>[license number]</p>  

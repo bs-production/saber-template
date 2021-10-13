@@ -75,7 +75,8 @@
 
       // scripts
       "embla-carousel.js" => "https://unpkg.com/embla-carousel/embla-carousel.umd.js",
-      "jquery.js" => "https://cdn.treehouseinternetgroup.com/cms_core/assets/js/jquery.min.js"
+      "jquery.js" => "https://cdn.treehouseinternetgroup.com/cms_core/assets/js/jquery.min.js",
+      "slick.js" => "https://cdn.treehouseinternetgroup.com/cms_core/assets/js/slick.min.js"
     );
     private $styleHelpers = array(
       "widgets-fix" => "<style>@media screen and (max-width:767px){.photogallery_wrapper .ad-gallery .ad-image-wrapper,.photogallery_wrapper .ad-gallery .ad-image-wrapper .ad-image{height:400px!important}.photogallery_wrapper .ad-gallery .ad-image-wrapper .ad-image img{height:auto}.ad-gallery .ad-controls{top:370px}}@media screen and (max-width:640px){.photogallery_wrapper .ad-gallery .ad-image-wrapper,.photogallery_wrapper .ad-gallery .ad-image-wrapper .ad-image{height:300px!important}.ad-gallery .ad-controls{top:270px}}</style>",
@@ -194,6 +195,9 @@
       // Content header
       $this->create_ContentHeaderTitle_token();
       $this->create_ContentHeaderImage_token();
+
+      // Widget import
+      $this->create_CredibilityContent_token();
     }
 
     private function create_TopInject_token() {
@@ -220,8 +224,17 @@
           $topData .= $this->generateLinkTag($this->proxy . $this->devLinks['content.css']);
 
           // Free estimate page requires jquery
-          if(strpos($this->thePage, 'free-estimate') !== false) {
+          if(
+            strpos($this->thePage, 'free-estimate') !== false
+          ) {
             $topData .= $this->generateScriptTag($this->prodLinks['jquery.js']);
+          }
+
+          if(
+            strpos($this->thePage, 'about-us') !== false
+          ) {
+            $topData .= $this->generateScriptTag($this->prodLinks['jquery.js']);
+            $topData .= $this->generateScriptTag($this->prodLinks['slick.js']);
           }
 
           /**
@@ -299,27 +312,22 @@
       $topNav->superMode = 'top';
       $topNav->superItems = array(
         'Services' => array(
-          'class' => 'columned',
-          'target' => 'services'
+            'target' => 'services'
         ),
-        17856 => array(
-          'class' => 'simple',
-          'children' => array(32810,114693,17850,17853,17857,17859,40112,29188,31194,231032)
+        'Our Work' => array(
+            'target' => 'work',
         ),
-        32810 => array(
-          'grandchildren' => false
-        ),
+        48417 => array(
+                'target' => 'about',
+                'show_about_link' => false
+            ),
         'Service Area' => array(
-          'target' => 'map',
+            'target' => 'map',
         ),
-        'Free Quote' => array(
-          'class' => 'free-estimate',
-          'target' => 'contact'
-        ),
-        43049 => array(
-          'grandchildren' => true
-        )
-      );
+        'Free Estimate*' => array(
+            'class' => 'quote',
+            'target' => 'contact'
+        ));
 
       $this->siteTokens['[[top-nav-links]]'] = $topNav->generateSuperMarkup();
     }
@@ -381,6 +389,31 @@
       }
 
       $this->siteTokens['[[content-header-img]]'] = $content;
+    }
+
+    private function create_CredibilityContent_token() {
+      $meta = array();
+      $meta['useGeo'] = true;
+      $meta['manualAssetPage'] = false;
+      $meta['useFeatured'] = false;
+      $meta['siloMode'] = false;
+      $meta['qty'] = 20;
+      $meta['template'] = 5493;
+      $templates = array();
+      $templates['main'] = array('
+          <div class="row" id="inline-affil-slider">
+              [[items]]
+          </div>');
+        $templates['item'] = array('
+          <div class="columns widget-item">
+              <div class="widget-affil-img">
+                  [[logo]]
+              </div>
+          </div>');
+      $title = 'Affiliations';
+      require_once('widgets/affiliations_sidebar_widget.php');
+
+      $this->siteTokens['[[credibility-content]]'] = $output;
     }
 
 
