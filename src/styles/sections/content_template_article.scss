@@ -186,11 +186,11 @@ $silo-width: 275;
     }
 
     img {
-      @apply rounded my-0;
+      @apply my-0;
     }
 
     iframe {
-      @apply rounded ring-1 ring-gray-900 ring-opacity-10;
+      @apply ring-1 ring-gray-900 ring-opacity-10;
     }
   }
 }
