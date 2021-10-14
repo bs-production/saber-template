@@ -24,3 +24,7 @@ http://bsiadmin.com/standalone/inline_widget_editor/
 
 # Reference to newer sites
 https://www.midwestfr.com/
+
+# Custom widget templates
+6982 - Saber Template Reviews
+6983 - Saber Burger B/A
