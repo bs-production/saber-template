@@ -2,7 +2,7 @@
 
 .sectionhighlight {
   @include avoidCollapse();
-  @apply px-8 ring-1 ring-gray-900 ring-opacity-10 py-4 my-4 clear-both rounded-md
+  @apply px-8 ring-1 ring-gray-900 ring-opacity-10 py-4 my-4 clear-both rounded-md overflow-hidden
     sm:px-6;
 }
 
