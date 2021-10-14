@@ -17,7 +17,6 @@
      * ===========
      */
     private $noSilo = array(
-      "insulation",
       "refer",
       "opinion",
       "sitemap",
@@ -27,7 +26,6 @@
       "repairing-seawalls-and-bulkheads",
       "stem-wall-repair",
       "crack-stitching"
-
     );
     private $modulePages = array(
       "opinion",
