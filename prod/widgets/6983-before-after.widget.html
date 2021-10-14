@@ -1,0 +1,46 @@
+<!-- START main -->
+<style>.before-after-container .before-after-header-container .header{font-size:1.875rem;font-weight:700;line-height:2.25rem;text-align:center}@media (max-width:767px){.before-after-container .before-after-header-container .header{font-size:1.5rem;line-height:2rem}}@media (max-width:639px){.before-after-container .before-after-header-container .header{font-size:1.25rem;line-height:1.75rem}}.before-after-container .before-after-carousal-wrapper{position:relative}.before-after-container .before-after-carousal-wrapper .before-after-controls-container{align-items:center;bottom:0;display:flex;justify-content:space-between;left:0;padding-left:2rem;padding-right:2rem;pointer-events:none;position:absolute;right:0;top:0;z-index:1}@media (max-width:639px){.before-after-container .before-after-carousal-wrapper .before-after-controls-container{margin-left:-1rem;margin-right:-1rem;padding-left:0;padding-right:0}}.before-after-container .before-after-carousal-wrapper .before-after-controls-container .control{border-radius:9999px;height:2.5rem;padding:.5rem;pointer-events:auto;width:2.5rem}.before-after-container .before-after-carousal-wrapper .before-after-controls-container .control:focus-within{outline:2px solid transparent;outline-offset:2px}.before-after-container .before-after-carousal-wrapper .before-after-controls-container .control:active{outline:2px solid transparent;outline-offset:2px}.before-after-container .before-after-carousal-wrapper .before-after-controls-container .control:before{content:url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 6.414 9.414 5l7.071 7.071-7.07 7.071L8 17.728l5.657-5.657L8 6.414Z' fill='%23fff'/%3E%3C/svg%3E")}.before-after-container .before-after-carousal-wrapper .before-after-controls-container .control.prev-control{transform:rotate(180deg)}.before-after-container .before-after-carousal-wrapper .before-after-wrapper{margin-left:auto;margin-right:auto;max-width:1280px;overflow:hidden;padding-left:2rem;padding-right:2rem}@media (max-width:639px){.before-after-container .before-after-carousal-wrapper .before-after-wrapper{padding-left:0;padding-right:0}}.before-after-container .before-after-carousal-wrapper .before-after-wrapper .before-after-container{display:flex}.before-after-container .before-after-carousal-wrapper .before-after-wrapper .before-after-container .before-after-slide{cursor:pointer;padding:5rem 3.5rem;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}@media (max-width:639px){.before-after-container .before-after-carousal-wrapper .before-after-wrapper .before-after-container .before-after-slide{padding:2rem 0}}.before-after-container .before-after-carousal-wrapper .before-after-wrapper .before-after-container .before-after-slide{flex:0 0 50%}@media (max-width:767px){.before-after-container .before-after-carousal-wrapper .before-after-wrapper .before-after-container .before-after-slide{flex:0 0 100%}}.before-after-container .before-after-carousal-wrapper .before-after-wrapper .before-after-container .before-after-slide .before-after-slide-content{padding-bottom:calc(var(--tw-aspect-h)/var(--tw-aspect-w)*100%);position:relative}.before-after-container .before-after-carousal-wrapper .before-after-wrapper .before-after-container .before-after-slide .before-after-slide-content>*{bottom:0;height:100%;left:0;position:absolute;right:0;top:0;width:100%}.before-after-container .before-after-carousal-wrapper .before-after-wrapper .before-after-container .before-after-slide .before-after-slide-content{--tw-aspect-w:16;--tw-aspect-h:12}.before-after-container .before-after-carousal-wrapper .before-after-wrapper .before-after-container .before-after-slide .before-after-slide-content .before-after-slide-body{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.before-after-container .before-after-carousal-wrapper .before-after-wrapper .before-after-container .before-after-slide .before-after-slide-content .before-after-slide-body .slide-showcase{position:relative}.before-after-container .before-after-carousal-wrapper .before-after-wrapper .before-after-container .before-after-slide .before-after-slide-content .before-after-slide-body .slide-showcase img{bottom:0;height:100%;left:0;-o-object-fit:cover;object-fit:cover;position:absolute;right:0;top:0;width:100%}.before-after-container .before-after-action-container{display:flex;justify-content:center}</style>
+
+<div class="before-after-container">
+  <div class="before-after-header-container">
+    <h2 class="header">[[title]]</h2>
+  </div>
+
+  <div class="before-after-carousal-wrapper">
+    <div class="before-after-controls-container">
+      <button class="control prev-control"></button>
+      <button class="control next-control"></button>
+    </div>
+
+    <div class="before-after-wrapper carousel">
+      <div class="before-after-container">
+        [[items]]
+      </div>
+    </div>
+  </div>
+
+  <div class="before-after-action-container">
+    <a href="/about-us/before-after.html" class="button">View More Before & After Photos</a>
+  </div>
+</div>
+<!-- END -->
+
+<!-- START item -->
+<div class="before-after-slide">
+  <div class="before-after-slide-content">
+    <div class="before-after-slide-body">
+      <div class="slide-showcase">
+        <img src="https://cdn.treehouseinternetgroup.com/uploads/before_after/[[company_id]]/medium/[[before-photo]]" alt="[[title]]">
+      </div>
+
+      <div class="slide-showcase">
+        <img src="https://cdn.treehouseinternetgroup.com/uploads/before_after/[[company_id]]/medium/[[after-photo]]" alt="[[title]]">
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END -->
+
+<!-- START script -->
+<script type="text/javascript">function InitCarousel(){var e=document.querySelector(".before-after-wrapper"),o=document.querySelector(".prev-control"),r=document.querySelector(".next-control"),l=EmblaCarousel(e,{loop:!1,containScroll:"keepSnaps"});o.addEventListener("click",(()=>{var e=l.slideNodes();l.canScrollPrev()?l.scrollPrev():l.scrollTo(e.length-1)})),r.addEventListener("click",(()=>{l.canScrollNext()?l.scrollNext():l.scrollTo(0)}))}document.addEventListener("DOMContentLoaded",InitCarousel);</script>
+<!-- END -->
