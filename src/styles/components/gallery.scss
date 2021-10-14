@@ -1,0 +1,29 @@
+.gallery.gallery {
+  @apply z-10 relative sm:block sm:float-none;
+
+  ul {
+    @apply grid grid-cols-3 gap-2;
+
+    li {
+      @apply pl-0 my-0 w-20 aspect-w-1 aspect-h-1 relative
+        sm:w-full xs:hidden;
+
+      &:first-child {
+        @apply col-span-3 w-full
+          xs:block;
+      }
+
+      &::before {
+        @apply hidden;
+      }
+
+      a {
+        @apply absolute inset-0 block;
+      }
+
+      img {
+        @apply absolute inset-0 w-full h-full object-cover;
+      }
+    }
+  }
+}
