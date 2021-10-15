@@ -21,7 +21,7 @@
     [[top-inject]]
   </head>
 
-  <body>
+  <body class='preload'>
     <nav>
       <!-- Top navigation -->
       <section class="navigation-layout">
