@@ -82,7 +82,9 @@
       // scripts
       "embla-carousel.js" => "https://unpkg.com/embla-carousel/embla-carousel.umd.js",
       "jquery.js" => "https://cdn.treehouseinternetgroup.com/cms_core/assets/js/jquery.min.js",
-      "slick.js" => "https://cdn.treehouseinternetgroup.com/cms_core/assets/js/slick.min.js"
+      "jquery.colorbox.js" => "https://cdn.treehouseinternetgroup.com/cms_core/assets/js/jquery.colorbox-min.js",
+      "slick.js" => "https://cdn.treehouseinternetgroup.com/cms_core/assets/js/slick.min.js",
+      "scrollable.js" => "https://www.saberfoundations.com/core/js/jquery.thScrollable.js"
     );
     private $styleHelpers = array(
       "widgets-fix" => "<style>@media screen and (max-width:767px){.photogallery_wrapper .ad-gallery .ad-image-wrapper,.photogallery_wrapper .ad-gallery .ad-image-wrapper .ad-image{height:400px!important}.photogallery_wrapper .ad-gallery .ad-image-wrapper .ad-image img{height:auto}.ad-gallery .ad-controls{top:370px}}@media screen and (max-width:640px){.photogallery_wrapper .ad-gallery .ad-image-wrapper,.photogallery_wrapper .ad-gallery .ad-image-wrapper .ad-image{height:300px!important}.ad-gallery .ad-controls{top:270px}}</style>",
@@ -226,22 +228,17 @@
         }
 
         
-        case "CONTENT": {
+        case "CONTENT":
+        /**
+         * When the page is unknown, its best
+         * to treat it as a CONTENT type
+         */
+        default:{
           $topData .= $this->generateLinkTag($this->proxy . $this->devLinks['content.css']);
-
-          // Free estimate page requires jquery
-          if(
-            strpos($this->thePage, 'free-estimate') !== false
-          ) {
-            $topData .= $this->generateScriptTag($this->prodLinks['jquery.js']);
-          }
-
-          if(
-            strpos($this->thePage, 'about-us') !== false
-          ) {
-            $topData .= $this->generateScriptTag($this->prodLinks['jquery.js']);
-            $topData .= $this->generateScriptTag($this->prodLinks['slick.js']);
-          }
+          $topData .= $this->generateScriptTag($this->prodLinks['jquery.js']);
+          $topData .= $this->generateScriptTag($this->prodLinks['slick.js']);
+          $topData .= $this->generateScriptTag($this->prodLinks['scrollable.js']);
+          $topData .= $this->generateScriptTag($this->prodLinks['jquery.colorbox.js']);
 
           /**
            * Pre widget fix
@@ -256,28 +253,19 @@
             $this->thePage == 'opinion' ||
             strpos($this->thePage, 'photo-gallery') ||
             strpos($this->thePage, 'meet-the-team') ||
-            strpos($this->thePage, 'confirmation')
+            strpos($this->thePage, 'confirmation') ||
+            strpos($this->thePage, 'foundation-pictures')
           ) {
-            $topData .= $this->generateScriptTag($this->prodLinks['jquery.js']);
             $topData .= $this->styleHelpers['widgets-fix'];
           }
 
           if(strpos($this->thePage, 'meet-the-team')) {
-            $topData .= $this->generateScriptTag($this->prodLinks['jquery.colorbox.js']);
             $topData .= $this->styleHelpers['meet-the-team-fix'];
           }
 
-          if(strpos($this->thePage, 'confirmation')) {
-            $topData .= $this->styleHelpers['confirmation-fix'];
-          }
-        }
-
-        /**
-         * When the page is unknown, its best
-         * to treat it as a CONTENT type
-         */
-        default: {
-          $topData .= $this->generateLinkTag($this->proxy . $this->devLinks['content.css']);
+          // if(strpos($this->thePage, 'confirmation')) {
+          //   $topData .= $this->styleHelpers['confirmation-fix'];
+          // }
         }
       }
 
