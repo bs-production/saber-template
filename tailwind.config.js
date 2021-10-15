@@ -85,6 +85,9 @@ module.exports = {
         ".object-left-": { objectPosition: "left" },
         ".object-bottom-": { objectPosition: "bottom" },
         ".object-right-": { objectPosition: "right" },
+        ".preload *": {
+          transition: "none !important",
+        },
       };
 
       addBase(essential_base);
