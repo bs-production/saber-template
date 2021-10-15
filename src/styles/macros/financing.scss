@@ -1,0 +1,16 @@
+#fin-form {
+  @apply float-right max-w-sm ml-8 bg-gray-100 ring-1 ring-gray-900 ring-opacity-25
+    lg:float-none lg:max-w-none lg:ml-0;
+
+  .form-area {
+    @apply bg-gray-900;
+
+    h2 {
+      @apply text-white my-0 text-center py-4;
+    }
+  }
+
+  form {
+    @apply p-4;
+  }
+}
