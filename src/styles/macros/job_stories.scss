@@ -1,0 +1,51 @@
+@import "../utils/reset_list_styles.scss";
+
+.job_story_index {
+  .job_story_items {
+    @apply flex flex-col mb-4;
+
+    .job_story_item {
+      .job_story_item_details {
+        @apply grid gap-6 items-center grid-cols-[300px,1fr] border-gray-900 border-b border-opacity-10 p-4
+          sm:grid-cols-1;
+
+        .job_story_gallery {
+          @apply aspect-w-1 aspect-h-1 relative;
+
+          ul {
+            @apply my-0;
+
+            .job_story_gallery_li {
+              @apply absolute inset-0;
+
+              .lightbox_caption {
+                .job_story_details_photo {
+                  @apply absolute inset-0;
+
+                  .job_story_album_details {
+                    @apply absolute inset-x-0 bottom-0 bg-gray-900 bg-opacity-50 backdrop-filter backdrop-blur-xl text-white px-4 py-2 font-bold;
+
+                    span {
+                      @apply text-sm pt-2 block;
+                    }
+                  }
+                }
+              }
+              @apply my-0;
+            }
+            @include resetListStyles;
+          }
+        }
+
+        .job_story_item_content {
+          .job_story_title {
+            @apply text-xl font-bold mb-4;
+          }
+
+          .job_story_description {
+          }
+        }
+      }
+    }
+  }
+}
