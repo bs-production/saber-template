@@ -23,3 +23,56 @@ main {
     @apply form-input rounded-md border-none ring-1 ring-gray-900 ring-opacity-25 focus:ring-2 focus:ring-gray-900 focus:ring-opacity-50 transition duration-200;
   }
 }
+
+/*
+  LAYOUTS
+  =============
+*/
+#contact_form {
+  @apply grid grid-cols-6 gap-4
+    lg:w-full;
+
+  & > div {
+    @apply flex flex-col col-span-6;
+
+    label {
+      @apply font-bold text-sm block;
+    }
+
+    input,
+    textarea {
+      @apply mt-1;
+    }
+
+    // Spicific cases
+    &.fname,
+    &.lname {
+      @apply col-span-3 
+        sm:col-span-6;
+    }
+
+    &.city,
+    &.state,
+    &.zip {
+      @apply col-span-2
+        sm:col-span-6;
+    }
+  }
+
+  & > h1,
+  & > h2,
+  & > h3,
+  & > h4,
+  & > h5,
+  & > h6 {
+    @apply col-span-6;
+  }
+
+  input.submit {
+    @apply text-white bg-primary hover:bg-opacity-90 block rounded-md cursor-pointer ring-0 px-6 font-bold;
+  }
+
+  .button {
+    @apply p-0 rounded-none block bg-transparent;
+  }
+}
