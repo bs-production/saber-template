@@ -48,6 +48,7 @@ class StickyNav {
         opacity: 0;
         transition: all 150ms ease-in-out;
       }
+      
       .sticky-nav-show {
         background-color: white;
         border-bottom-color: rgba(35, 31, 32, 0.10);
