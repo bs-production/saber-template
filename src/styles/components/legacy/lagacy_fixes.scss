@@ -1,0 +1,37 @@
+.tab-wrapper {
+  @apply clear-both;
+}
+
+.team_single_content {
+  width: auto !important;
+}
+
+.review_details
+  .review_details_body
+  .review-icons
+  .social-share-inline
+  a::before {
+  margin-top: 0px !important;
+  margin-left: 0px !important;
+}
+
+#gallery.content {
+  float: left !important;
+}
+
+#thumbs.navigation-gallery {
+  clear: both;
+  width: auto !important;
+
+  ul {
+    @apply my-0;
+
+    li {
+      @apply my-0 pl-0;
+
+      &::before {
+        @apply hidden;
+      }
+    }
+  }
+}
