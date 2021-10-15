@@ -43,6 +43,7 @@
 @import "../components/colorlink.scss";
 @import "../components/slick_theme.scss";
 @import "../components/gallery.scss";
+@import "../components/legacy/lagacy_fixes.scss";
 
 /*
   Widgets
@@ -77,3 +78,4 @@
 @import "../macros/opinion.scss";
 @import "../macros/free_estimate.scss";
 @import "../macros/city_page.scss";
+@import "../macros/job_stories.scss";
