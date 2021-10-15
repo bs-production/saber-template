@@ -17,7 +17,6 @@
      * ===========
      */
     private $noSilo = array(
-      "refer",
       "opinion",
       "sitemap",
       "service-area",
