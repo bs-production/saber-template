@@ -195,7 +195,6 @@
       $this->create_BottomNavLinks_token();
 
       // Content header
-      $this->create_ContentHeaderTitle_token();
       $this->create_ContentHeaderImage_token();
 
       // Widget import
@@ -302,27 +301,6 @@
       $this->siteTokens['[[bottom-nav-links]]'] = $bottomNav->generateSuperMarkup();
     }
 
-    private function create_ContentHeaderTitle_token() {
-      $title = "";
-
-      // Only when content header is needed
-      if($this->showContentHeader) {
-        /**
-         * NOTE:
-         * ======
-         * cmsPageData['page.name'] does not work in this context.
-         * 
-         * So as a work around I'm trying to mimic its behaviour
-         * and it seems to be consistent with cmsPageData['page.name']
-         */
-        $title = $this->convertToTitleCase(
-          $this->getUrlLastString($this->thePage)
-        );
-      }
-
-      $this->siteTokens['[[content-header-title]]'] = $title;
-    }
-
     private function create_ContentHeaderImage_token() {
       $content = "";
 
@@ -426,21 +404,6 @@
       return str_replace(array("\\r", "\\n"), '',sprintf("
         <img src=\"%s\" class=\"%s\" />
       ", $src, $classList));
-    }
-
-    // This function gets the last item from an url
-    // e.g. "/somedata/that/goes/deep" => "deep"
-    function getUrlLastString($url) {
-      $urlArr = explode('/', $url);
-      $urlArrLength = count($urlArr);
-
-      return str_replace(".html", "", $urlArr[$urlArrLength - 1]);
-    }
-
-    // This converts a hyphened string to title case
-    // e.g. "some-nice-text" => "Some Nice Text"
-    function convertToTitleCase($stringData) {
-      return ucwords(str_replace("-", " ", $stringData));
     }
 
     function getFileFromCDN($fileName) {

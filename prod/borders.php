@@ -1,10 +1,6 @@
 <?php
   global $thePage, $cmsPageData, $siteTokens;
   $siteConfig = new SiteConfig($thePage, $csmPageData, $siteTokens);
-
-  if ($thePage == 'index') {
-    $cmsPageData['page.body_content'] = '';
-  }
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +56,7 @@
           </div>
 
           <div class="template-header-title">
-            <h1>[[content-header-title]]</h1>
+            <h1><?= $cmsPageData['page.name']; ?></h1>
           </div>
         </section>
         <? endif; ?>
