@@ -159,15 +159,15 @@ class StickyNav {
       if (isFastEnough) {
         if (this.previousTop >= this.currentTop) {
           this.navClone.classList.add("sticky-nav-show");
-          silo.classList.add("push-down");
+          silo?.classList.add("push-down");
         } else {
           this.navClone.classList.remove("sticky-nav-show");
-          silo.classList.remove("push-down");
+          silo?.classList.remove("push-down");
         }
       }
     } else {
       this.navClone.classList.remove("sticky-nav-show");
-      silo.classList.remove("push-down");
+      silo?.classList.remove("push-down");
     }
 
     this.previousTop = this.currentTop;
