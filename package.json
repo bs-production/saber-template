@@ -16,8 +16,10 @@
     "parcel": "parcel"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.15.8",
     "@fullhuman/postcss-purgecss": "^4.0.3",
     "@parcel/transformer-image": "2.0.0-rc.0",
+    "@parcel/transformer-sass": "2.0.0-rc.0",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/line-clamp": "^0.2.1",
