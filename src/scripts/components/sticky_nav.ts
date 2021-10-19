@@ -13,7 +13,7 @@ class StickyNav {
 
   constructor() {
     this._createClassDefinitions();
-    this._createCompansatingStyles();
+    this._siloFixes();
 
     this._cloneNav();
 
@@ -79,9 +79,15 @@ class StickyNav {
    * Some styles do not take into account
    * the sticky nav. So I'm just compansating here
    */
-  private _createCompansatingStyles() {
+  private _siloFixes() {
     const defaultTopStyle = 16;
-    const navHeight = 42;
+    const bannerHeight = document
+      .querySelector(".banner")
+      .getBoundingClientRect().height;
+    const supernavHeight = document
+      .querySelector(".supernav")
+      .getBoundingClientRect().height;
+    const viewportHeight = window.innerHeight;
 
     let stylesToInsert = ``;
 
@@ -92,7 +98,21 @@ class StickyNav {
     stylesToInsert += `
       @media (min-width: 1023px) {
         #silo-container {
-          top: ${defaultTopStyle + navHeight}px !important;
+          top: ${defaultTopStyle + bannerHeight}px !important;
+          max-height: ${
+            viewportHeight - (defaultTopStyle * 2 + bannerHeight)
+          }px !important;
+          transition: all 125ms ease-in-out;
+          overflow: overlay;
+        }
+
+
+        #silo-container.push-down {
+          top: ${defaultTopStyle + bannerHeight + supernavHeight}px !important;
+          max-height: ${
+            viewportHeight -
+            (defaultTopStyle * 2 + bannerHeight + supernavHeight)
+          }px !important;
         }
       }
     `;
@@ -128,6 +148,8 @@ class StickyNav {
   }
 
   private _autoHideNavigation() {
+    const silo = document.querySelector("#silo-container");
+
     this.currentTop = window.scrollY;
     const isFastEnough =
       Math.abs(this.previousTop - this.currentTop) > this.scrollThreshold;
@@ -137,12 +159,15 @@ class StickyNav {
       if (isFastEnough) {
         if (this.previousTop >= this.currentTop) {
           this.navClone.classList.add("sticky-nav-show");
+          silo.classList.add("push-down");
         } else {
           this.navClone.classList.remove("sticky-nav-show");
+          silo.classList.remove("push-down");
         }
       }
     } else {
       this.navClone.classList.remove("sticky-nav-show");
+      silo.classList.remove("push-down");
     }
 
     this.previousTop = this.currentTop;
@@ -152,6 +177,7 @@ class StickyNav {
     // On mobile this will also fire on scrolling since the viewport height may change
     if (this.viewportWidth !== window.innerWidth) {
       this._createClassDefinitions();
+      this._siloFixes();
       this.viewportWidth = window.innerWidth;
     }
   }
