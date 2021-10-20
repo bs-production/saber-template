@@ -218,6 +218,7 @@
         case "HOME": {
           $topData .= $this->generateLinkTag($this->proxy . $this->devLinks['home.css']);
           $topData .= $this->generateScriptTag($this->prodLinks['embla-carousel.js']);
+          $topData .= $this->generateScriptTag($this->prodLinks['jquery.js']);
           break;
         }
 
