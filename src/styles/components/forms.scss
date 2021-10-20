@@ -43,8 +43,13 @@ main {
     }
 
     input,
+    select,
     textarea {
       @apply mt-1;
+    }
+
+    select {
+      @apply leading-6;
     }
 
     // Spicific cases
