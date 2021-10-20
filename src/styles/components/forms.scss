@@ -33,6 +33,9 @@ main {
     lg:w-full;
 
   & > div {
+    float: none !important;
+    width: auto !important;
+
     @apply flex flex-col col-span-6;
 
     label {

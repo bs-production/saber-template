@@ -13,36 +13,19 @@
       @apply bg-gray-100 mb-0;
 
       #contact_form {
-        label {
-          @apply font-bold text-xs text-gray-600 pb-1 inline-block;
-        }
+        & > div {
+          // Spicific cases
+          &.city,
+          &.fname,
+          &.lname {
+            @apply col-span-6;
+          }
 
-        > div {
-          @apply mb-3;
-        }
-
-        select {
-          @apply text-sm text-gray-800;
-        }
-
-        input {
-          @apply w-full float-none text-sm;
-        }
-
-        textarea {
-          @apply w-full float-none text-sm;
-        }
-
-        .state {
-          @apply float-right w-[48%];
-        }
-
-        .zip {
-          @apply w-[48%];
-        }
-
-        .phone {
-          @apply clear-both;
+          &.state,
+          &.zip {
+            @apply col-span-3 
+              md:col-span-6;
+          }
         }
 
         #save {
