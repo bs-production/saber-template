@@ -3,7 +3,7 @@
 
   .level-1.large {
     @apply flex justify-end md:hidden space-x-16
-      lg:space-x-6;
+      xl:space-x-10;
 
     > li {
       @apply font-semibold relative py-4 lg:text-sm;
