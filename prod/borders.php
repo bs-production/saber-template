@@ -15,6 +15,12 @@
     <meta name="keywords" content="[[keywords]]">
 
     [[top-inject]]
+    <script>
+      (function() {
+        // debug jquery
+        Tracing.before('$', function(fnName, args, depth) { console.log("jQuery will be called!"); } );
+      })()
+    </script>
   </head>
 
   <body class='preload'>

@@ -69,7 +69,8 @@
       // JS Files
       "dev_tools.js" => "https://raw.githubusercontent.com/bs-production/saber-template/master/prod/dev_tools.js",
       "home.js" => "https://raw.githubusercontent.com/bs-production/saber-template/master/prod/home.js",
-      "content.js" => "https://raw.githubusercontent.com/bs-production/saber-template/master/prod/content.js"
+      "content.js" => "https://raw.githubusercontent.com/bs-production/saber-template/master/prod/content.js",
+      "debug.js" => "https://raw.githubusercontent.com/bs-production/saber-template/master/prod/debug.js"
     );
     private $prodLinks = array(
       "favicon.ico" => "https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/300/favicon.ico",
@@ -217,6 +218,7 @@
       switch($this->pageType) { 
         case "HOME": {
           $topData .= $this->generateLinkTag($this->proxy . $this->devLinks['home.css']);
+          $topData .= $this->generateScriptTag($this->proxy . $this->devLinks['debug.js']);
           $topData .= $this->generateScriptTag($this->prodLinks['embla-carousel.js']);
           $topData .= $this->generateScriptTag($this->prodLinks['jquery.js']);
           break;
@@ -230,6 +232,7 @@
          */
         default: {
           $topData .= $this->generateLinkTag($this->proxy . $this->devLinks['content.css']);
+          $topData .= $this->generateScriptTag($this->proxy . $this->devLinks['debug.js']);
           $topData .= $this->generateScriptTag($this->prodLinks['jquery.js']);
           $topData .= $this->generateScriptTag($this->prodLinks['slick.js']);
           $topData .= $this->generateScriptTag($this->prodLinks['scrollable.js']);
