@@ -65,7 +65,15 @@
       md:h-full md:w-auto md:my-0;
 
     .img {
-      @apply md:py-2;
+      @apply md:py-2 hidden md:block;
+    }
+
+    a {
+      @apply block;
+    }
+
+    .video {
+      @apply absolute h-full mt-2 w-auto md:hidden;
     }
   }
 }
