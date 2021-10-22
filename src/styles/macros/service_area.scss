@@ -1,7 +1,7 @@
 #gmap-wrap {
   $gmap-size: 350;
   @apply float-right relative overflow-hidden w-[#{$gmap-size}px] h-[#{$gmap-size}px]
-    sm:float-none sm:w-full;
+    sm:float-none sm:w-full sm:h-auto;
 
   .gm-style {
     @apply absolute inset-0;
