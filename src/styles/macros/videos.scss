@@ -22,11 +22,11 @@
       }
 
       .social-share-inline {
-        @apply block;
+        @apply block pointer-events-none;
 
         ul {
           @include resetListStyles();
-          @apply flex justify-end -bottom-4 right-0 absolute transform translate-y-full my-0 w-full;
+          @apply flex justify-end -bottom-4 right-0 absolute transform translate-y-full my-0 w-full pointer-events-auto;
         }
       }
     }
