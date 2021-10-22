@@ -6,7 +6,7 @@ $silo-width: 275;
   display: grid;
   grid-template-columns: #{$silo-width}px auto;
 
-  grid-template-rows: auto auto;
+  grid-template-rows: auto 1fr;
 
   @screen lg {
     grid-template-columns: 1fr;
