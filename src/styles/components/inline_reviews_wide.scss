@@ -1,0 +1,33 @@
+.inline-reviews-wide.inline-reviews-wide.inline-reviews-wide {
+  ul {
+    li {
+      @apply pl-[5px];
+
+      [class$="-content"] {
+        @apply pt-1 clear-both;
+      }
+
+      [class$="-fullurl"] {
+        a {
+          @apply text-primary pt-1;
+        }
+      }
+
+      [class$="-details"] {
+        @apply h-auto;
+
+        [class$="-customer"] {
+          @apply line-clamp-2;
+        }
+      }
+
+      [class$="-content"] {
+        @apply line-clamp-2;
+      }
+
+      &::before {
+        @apply hidden;
+      }
+    }
+  }
+}
