@@ -29,14 +29,25 @@
 
 .team_single {
   .team_single_content {
+    @apply pr-5 float-left
+      md:w-full md:float-none;
+
     .team_single_desc {
       .team_single_image {
         @apply float-left mr-4 mb-4;
       }
     }
   }
-  .team_single_widgets {
+
+  .team_single_sidebar {
+    @apply float-left
+      lg:w-[calc(50%+150px)];
   }
+
+  .team_single_widgets {
+    @apply clear-both;
+  }
+
   .team_single_links {
     a {
       @apply no-underline text-sm inline-block float-left bg-gray-50 hover:bg-gray-100 active:bg-gray-200 ring-1 ring-gray-900 ring-opacity-10 py-2 px-4;
