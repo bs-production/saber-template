@@ -1,0 +1,17 @@
+.inline-reviews-box.inline-reviews-box {
+  ul {
+    li {
+      @apply pl-[10px];
+
+      [class$="-moreurl"] {
+        a {
+          @apply text-primary pt-1 font-bold;
+        }
+      }
+
+      &::before {
+        @apply hidden;
+      }
+    }
+  }
+}
