@@ -13,7 +13,6 @@
 
     <meta name="description" content="[[description]]">
     <meta name="keywords" content="[[keywords]]">
-
     [[top-inject]]
   </head>
 
@@ -24,7 +23,7 @@
         <!-- BG for banner -->
         <div class="banner-bg"></div>
         <div class="banner">
-          <span class="serving"> Yes, We Serve This Area </span>
+          <span class="serving"> Yes, We Serve [territory] </span>
 
           <a class="number" href="tel:[[phone]]">[[phone]]</a>
         </div>
@@ -223,5 +222,15 @@
     </footer>
 
     [[bottom-inject]]
+    <script>
+      // Replace header service with "we service" token if it's not empty
+      (() => {
+        var ws = '[[city_serve_token]]';
+        
+        if (ws && ws == '[[city_serve_token]]') {
+          document.querySelector('.serving').innerHTML = ws.replace(/(<\/?h)([0-6])>/g, '');
+        }
+      })();
+    </script>
   </body>
 </html>
