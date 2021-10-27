@@ -49,10 +49,6 @@
       "testimonials",
       "free-estimate"
     );
-    private $slickCarouselPages = array(
-      "confirmation",
-      "about-us"
-    );
     private $contentHeaderImages = array(
       "basement-waterproofing" => "https://www.saberfoundations.com/core/images/templates/health/headers/waterproofing-silo-test.jpg",
       "commercial-foundation-contractor" => "https://www.saberfoundations.com/core/images/templates/health/headers/commercial-silo-test.jpg",
@@ -196,9 +192,6 @@
 
       // Content header
       $this->create_ContentHeaderImage_token();
-
-      // Widget import
-      // $this->create_CredibilityContent_token();
     }
 
     private function create_TopInject_token() {
@@ -222,12 +215,11 @@
           break;
         }
 
-        
-        case "CONTENT":
         /**
          * When the page is unknown, its best
          * to treat it as a CONTENT type
          */
+        case "CONTENT":
         default: {
           $topData .= $this->generateLinkTag($this->proxy . $this->devLinks['content.css']);
           $topData .= $this->generateScriptTag($this->prodLinks['jquery.js']);
@@ -333,35 +325,6 @@
       $this->siteTokens['[[content-header-img]]'] = $content;
     }
 
-    /**
-     * NOTE:
-     * I'm not sure what the best approach might be for this...
-     */
-    // private function create_CredibilityContent_token() {
-    //   $meta = array();
-    //   $meta['useGeo'] = true;
-    //   $meta['manualAssetPage'] = false;
-    //   $meta['useFeatured'] = false;
-    //   $meta['siloMode'] = false;
-    //   $meta['qty'] = 20;
-    //   $meta['template'] = 5493;
-    //   $templates = array();
-    //   $templates['main'] = array('
-    //       <div class="row" id="inline-affil-slider">
-    //           [[items]]
-    //       </div>');
-    //   $templates['item'] = array('
-    //     <div class="columns widget-item">
-    //         <div class="widget-affil-img">
-    //             [[logo]]
-    //         </div>
-    //     </div>');
-    //   $title = 'Affiliations';
-    //   require_once('widgets/affiliations_sidebar_widget.php');
-
-    //   $this->siteTokens['[[credibility-content]]'] = $output;
-    // }
-
 
      /**
      * UTILITIES
@@ -370,12 +333,6 @@
     
     /**
      * Returns true when there is a substr match inside an array
-     * 
-     * NOTE:
-     * ====
-     * The naming of this utility is not consistent with the rest of
-     * the naming convention. It's more of an extension of php's built-in
-     * functions. So it made more sense to keep to that convention and not to mine
      */
     function substr_in_array($haystack, $needle) {
       for($i = 0; $i < count($haystack); $i++) {
