@@ -24,7 +24,6 @@
         <div class="banner-bg"></div>
         <div class="banner">
           <span class="serving"> Yes, We Serve [territory] </span>
-
           <a class="number" href="tel:[[phone]]">[[phone]]</a>
         </div>
 
@@ -149,7 +148,6 @@
       <section class="cred-section space-section">
         <div class="cred-controls-container">
           <button class="control prev-control"></button>
-
           <button class="control next-control"></button>
         </div>
 
