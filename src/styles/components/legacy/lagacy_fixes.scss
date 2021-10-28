@@ -2,6 +2,10 @@
   @apply clear-both;
 }
 
+.leaflet-bottom {
+  z-index: 999 !important;
+}
+
 .review_details
   .review_details_body
   .review-icons
