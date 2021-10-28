@@ -1,0 +1,7 @@
+{
+  "mangle": {
+    "properties": {
+      "debug": "ct"
+    }
+  }
+}
