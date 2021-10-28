@@ -252,11 +252,6 @@
         }
       }
 
-      // Insert dev_tools reset
-      if($this->isDevelopment) {
-        $bottomData .= $this->generateScriptTag($this->proxy . $this->devLinks['dev_tools.js']);
-      }
-
       $this->siteTokens['[[bottom-inject]]'] = $bottomData;
     }
 
