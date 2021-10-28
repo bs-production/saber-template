@@ -1,7 +1,7 @@
 {
   "mangle": {
     "properties": {
-      "debug": ""
+      "debug": false
     }
   }
 }
