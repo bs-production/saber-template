@@ -15,7 +15,7 @@
     )
     minmax(theme("spacing.8"), auto);
   grid-template-rows: auto auto;
-  z-index: 999;
+  z-index: 1001;
 
   @screen xl {
     grid-template-columns:
