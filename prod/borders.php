@@ -220,15 +220,5 @@
     </footer>
 
     [[bottom-inject]]
-    <script>
-      // Replace header service with "we service" token if it's not empty
-      (() => {
-        var ws = '[[city_serve_token]]';
-        
-        if (ws && ws == '[[city_serve_token]]') {
-          document.querySelector('.serving').innerHTML = ws.replace(/(<\/?h)([0-6])>/g, '');
-        }
-      })();
-    </script>
   </body>
 </html>
