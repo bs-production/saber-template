@@ -4,11 +4,11 @@
       @apply py-2;
 
       .photo_gallery_thumb {
-        @apply inline h-[100px] w-[100px] float-left;
+        @apply inline h-[100px] w-[100px];
       }
 
       .widget_item_preview {
-        @apply inline-block h-[100px] float-left ml-4;
+        @apply inline h-[100px] w-[70%] float-right;
       }
     }
 
