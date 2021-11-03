@@ -11,11 +11,11 @@
     }
 
     .step {
-      @apply relative border-none ring-1 ring-gray-900 ring-opacity-10 rounded-md pb-[1px]
+      @apply relative border-none ring-1 ring-gray-900 ring-opacity-10 rounded-md pb-[1px] hidden
         sm:w-full;
 
       &.current {
-        @apply shadow-xl ring-primary;
+        @apply shadow-xl ring-primary block;
 
         .title {
           @apply bg-primary text-white;

@@ -36,7 +36,7 @@ main {
     float: none !important;
     width: auto !important;
 
-    @apply col-span-6;
+    @apply flex flex-col col-span-6;
 
     label {
       @apply font-bold text-sm block;
