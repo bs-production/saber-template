@@ -29,7 +29,7 @@ class StickyNav {
         left: 0;
         right: 0;
         background: transparent;
-        z-index: 1000;
+        z-index: 1005;
         border-bottom: 1px solid transparent;
         pointer-events: none;
         transition: all 100ms ease-in-out;
