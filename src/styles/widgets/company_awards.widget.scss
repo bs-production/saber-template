@@ -1,0 +1,11 @@
+@mixin CompanyAwardsWidget {
+  .widget_awards {
+    .widget_item {
+      @apply mb-6;
+
+      .widget_thumbnail {
+        @apply mb-2 flex justify-center;
+      }
+    }
+  }
+}
