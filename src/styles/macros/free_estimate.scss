@@ -11,15 +11,19 @@
     }
 
     .step {
-      @apply relative border-none ring-1 ring-gray-900 ring-opacity-10 rounded-md pb-[1px] hidden
+      @apply relative border-none ring-1 ring-gray-900 ring-opacity-10 rounded-md pb-[1px]
         sm:w-full;
 
       &.current {
-        @apply shadow-xl ring-primary block;
+        @apply shadow-xl ring-primary;
 
         .title {
           @apply bg-primary text-white;
         }
+      }
+
+      &.current ~ .step {
+        @apply hidden;
       }
 
       .title {
