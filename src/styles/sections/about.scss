@@ -9,10 +9,10 @@
         sm:text-xl;
 
       span:last-of-type {
-        @apply relative;
+        @apply relative inline-block;
 
         &::after {
-          @apply absolute -bottom-6 left-0 h-2 w-1/2 bg-primary
+          @apply absolute -bottom-6 left-0 h-2 w-[15%] bg-primary
             sm:-bottom-4;
           transform: skewX(30deg);
           content: "";
