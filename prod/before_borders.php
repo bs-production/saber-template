@@ -74,6 +74,15 @@
       "fonts.preconnect" => "https://fonts.gstatic.com",
       "fonts.css" => "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800;900&display=swap",
 
+      // Css files
+      "global.css" => "https://s3.amazonaws.com/cdn.treehouseinternetgroup.com/cms_images/300/global.css",
+      "home.css" => "https://s3.amazonaws.com/cdn.treehouseinternetgroup.com/cms_images/300/home.css",
+      "content.css" => "https://s3.amazonaws.com/cdn.treehouseinternetgroup.com/cms_images/300/content.css",
+
+      // JS Files
+      "home.js" => "https://s3.amazonaws.com/cdn.treehouseinternetgroup.com/cms_images/300/home.js",
+      "content.js" => "https://s3.amazonaws.com/cdn.treehouseinternetgroup.com/cms_images/300/content.js",
+
       // scripts
       "embla-carousel.js" => "https://unpkg.com/embla-carousel/embla-carousel.umd.js",
       "jquery.js" => "https://cdn.treehouseinternetgroup.com/cms_core/assets/js/jquery.min.js",
@@ -200,7 +209,7 @@
       // Insert favicon
       $topData .= $this->generateLinkTag($this->prodLinks['favicon.ico'], "icon");
       // Insert CSS reset
-      $topData .= $this->generateLinkTag($this->proxy . $this->devLinks['global.css']);
+      $topData .= $this->generateLinkTag($this->prodLinks['global.css']);
 
       // Insert fonts
       $topData .= $this->generateLinkTag($this->prodLinks['fonts.preconnect'], "preconnect");
@@ -209,7 +218,7 @@
       // Page type based injection
       switch($this->pageType) { 
         case "HOME": {
-          $topData .= $this->generateLinkTag($this->proxy . $this->devLinks['home.css']);
+          $topData .= $this->generateLinkTag($this->prodLinks['home.css']);
           $topData .= $this->generateScriptTag($this->prodLinks['embla-carousel.js']);
           $topData .= $this->generateScriptTag($this->prodLinks['jquery.js']);
           break;
@@ -221,7 +230,7 @@
          */
         case "CONTENT":
         default: {
-          $topData .= $this->generateLinkTag($this->proxy . $this->devLinks['content.css']);
+          $topData .= $this->generateLinkTag($this->prodLinks['content.css']);
           $topData .= $this->generateScriptTag($this->prodLinks['jquery.js']);
           $topData .= $this->generateScriptTag($this->prodLinks['slick.js']);
           $topData .= $this->generateScriptTag($this->prodLinks['scrollable.js']);
@@ -238,7 +247,7 @@
       // Page type based injection
       switch($this->pageType) { 
         case "HOME": {
-          $bottomData .= $this->generateScriptTag($this->proxy . $this->devLinks['home.js']);
+          $bottomData .= $this->generateScriptTag($this->prodLinks['home.js']);
           break;
         }
 
@@ -248,7 +257,7 @@
          */
         case "CONTENT":
         default: {
-          $bottomData .= $this->generateScriptTag($this->proxy . $this->devLinks['content.js']);
+          $bottomData .= $this->generateScriptTag($this->prodLinks['content.js']);
         }
       }
 
