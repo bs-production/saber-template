@@ -2,6 +2,7 @@
 
 // Widgets
 @import "../widgets/before_after_sidebar.widget.scss";
+@import "../widgets/company_awards.widget.scss";
 @import "../widgets/case_study.widget.scss";
 @import "../widgets/city_map.widget.scss";
 @import "../widgets/city_page_list.widget.scss";
@@ -60,6 +61,7 @@
   @include ContactWidget();
   @include JobStoriesWidget();
   @include CityMapWidget();
+  @include CompanyAwardsWidget();
 }
 
 .citypage_testimonial_main {
