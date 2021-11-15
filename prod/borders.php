@@ -28,7 +28,7 @@
         </div>
 
         <!-- Super nav -->
-        [[top-nav-links]]
+        [[top_nav]]
 
         <div class="logo-container">
           <a href='/'>
@@ -153,6 +153,10 @@
 
         <div class="carousel cred-wrapper">
           <div class="cred-container">
+            <div class="cred-slide">
+              <img class="cred-img" src="https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/61859d5c73f29_logo-299-cslb.png" alt="Contractor State License Board Approved">
+            </div>
+            
             <div class="cred-slide">
               <img class="cred-img" src="https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/58e2c31ae2dc7_carlsbad-chamber-of-commerce-logo-1.png" alt="Carlsbad Chamber of Commerce">
             </div>
