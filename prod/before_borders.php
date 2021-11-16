@@ -218,7 +218,11 @@
       // Page type based injection
       switch($this->pageType) { 
         case "HOME": {
-          $topData .= $this->generateLinkTag($this->prodLinks['home.css']);
+          if($this->isDev) {
+            $topData .= $this->generateLinkTag($this->proxy . $this->devLinks['home.css']);
+          } else {
+            $topData .= $this->generateLinkTag($this->prodLinks['home.css']);
+          }
           $topData .= $this->generateScriptTag($this->prodLinks['embla-carousel.js']);
           $topData .= $this->generateScriptTag($this->prodLinks['jquery.js']);
           break;
@@ -230,7 +234,11 @@
          */
         case "CONTENT":
         default: {
-          $topData .= $this->generateLinkTag($this->prodLinks['content.css']);
+          if($this->isDev) {
+            $topData .= $this->generateLinkTag($this->proxy . $this->devLinks['content.css']);
+          } else {
+            $topData .= $this->generateLinkTag($this->prodLinks['content.css']);
+          }
           $topData .= $this->generateScriptTag($this->prodLinks['jquery.js']);
           $topData .= $this->generateScriptTag($this->prodLinks['slick.js']);
           $topData .= $this->generateScriptTag($this->prodLinks['scrollable.js']);
@@ -247,7 +255,11 @@
       // Page type based injection
       switch($this->pageType) { 
         case "HOME": {
-          $bottomData .= $this->generateScriptTag($this->prodLinks['home.js']);
+          if($this->isDev) {
+            $bottomData .= $this->generateScriptTag($this->proxy . $this->devLinks['home.js']);
+          } else {
+            $bottomData .= $this->generateScriptTag($this->prodLinks['home.js']);
+          }
           break;
         }
 
@@ -257,7 +269,11 @@
          */
         case "CONTENT":
         default: {
-          $bottomData .= $this->generateScriptTag($this->prodLinks['content.js']);
+          if($this->isDev) {
+            $bottomData .= $this->generateScriptTag($this->proxy . $this->devLinks['content.js']);
+          } else {
+            $bottomData .= $this->generateScriptTag($this->prodLinks['content.js']);
+          }
         }
       }
 
