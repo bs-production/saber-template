@@ -32,18 +32,24 @@
 
         <div class="logo-container">
           <a href='/'>
-            <video
-              class="video"
-              loop
-              preload="none"
-              poster="https://cdn.treehouseinternetgroup.com/cms_images/300/video_thumb.jpg"
-            >
-              <source
-                src="https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/300/SaberLogo-NoBorder.mp4"
-                type="video/mp4"
-              />
-              Your browser does not support the video tag.
-            </video>
+            <div class="video-container">
+              <video
+                class="video"
+                loop
+                preload="none"
+                poster="https://cdn.treehouseinternetgroup.com/cms_images/300/video_thumb.jpg"
+              >
+                <source
+                  src="https://dc69b531ebf7a086ce97-290115cc0d6de62a29c33db202ae565c.ssl.cf1.rackcdn.com/300/SaberLogo-NoBorder.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+
+              <label class="logo-hover">
+                <span>Hover to hear me roar!</span>
+              </label>
+            </div>
             <img
               class="object-contain- object-left- img"
               src="https://cdn.treehouseinternetgroup.com/cms_images/755/logo.png"
