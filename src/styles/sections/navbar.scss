@@ -60,8 +60,8 @@
   }
 
   .logo-container {
-    @apply relative col-start-2 col-end-3 row-start-2 row-end-3 mb-4 h-[125px] z-[-1]
-      xl:row-start-2 xl:row-end-3 xl:my-5
+    @apply relative col-start-2 col-end-3 row-start-2 row-end-3 mb-12 h-[125px] z-[-1] mr-2
+      xl:row-start-2 xl:row-end-3 xl:mt-5
       md:h-full md:w-auto md:my-0;
 
     .img {
@@ -72,8 +72,16 @@
       @apply block;
     }
 
-    .video {
-      @apply absolute h-full mt-2 w-auto md:hidden;
+    .video-container {
+      @apply absolute h-full my-2 w-auto md:hidden flex flex-col items-center max-w-full;
+
+      .video {
+        @apply h-full mt-2 w-auto md:hidden;
+      }
+
+      .logo-hover {
+        @apply font-bold italic text-sm text-primary whitespace-nowrap md:hidden text-center flex justify-center w-full;
+      }
     }
   }
 }
