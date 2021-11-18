@@ -17,7 +17,8 @@ function InitVideoLogo() {
       video.play();
     });
     video.addEventListener("mouseleave", () => {
-      video.currentTime = 0;
+      video.currentTime = video.duration - 1;
+      console.log(video.duration);
       video.pause();
     });
   });
