@@ -10,6 +10,7 @@
         "showBreadcrumbs": false
       }
     },
-    "posthtml-beautify": {}
+    "posthtml-beautify": {},
+    "@bs-production/posthtml-plugin-img-format": {}
   }
 }
