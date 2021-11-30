@@ -7,6 +7,15 @@
   "browserslist": [
     "Edge 15"
   ],
+  "parcel-namer-rewrite": {
+    "developmentHashing": true,
+    "silent": true,
+    "rules": {
+      "(.*).html": "$1.html",
+      "(.*).(png|jpg|jpeg|webp|avif|gif)": "assets/$1/$1.$2",
+      "(.*).(svg)": "svgs/$1.svg"
+    }
+  },
   "scripts": {
     "prod:build": "node ./lib/build-prod/index.js",
     "parcel:serve": "parcel serve src/html/pages/*.html --no-source-maps",
@@ -34,6 +43,7 @@
     "lodash": "^4.17.21",
     "npm-run-all": "^4.1.5",
     "parcel": "^2.0.1",
+    "parcel-namer-rewrite": "^2.0.0-rc.1",
     "postcss": "^8.3.0",
     "postcss-cli": "^8.3.1",
     "posthtml-beautify": "^0.7.0",
@@ -42,6 +52,7 @@
     "posthtml-inline-svg": "^0.2.0",
     "posthtml-load-config": "^2.0.0",
     "sass": "^1.35.2",
+    "sharp": "^0.29.1",
     "tailwindcss": "2.1.4"
   },
   "dependencies": {
