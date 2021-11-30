@@ -149,10 +149,17 @@ class StickyNav {
 
   private _autoHideNavigation() {
     const silo = document.querySelector("#silo-container");
+    const realNavTop = this.navReal.getBoundingClientRect().top;
 
     this.currentTop = window.scrollY;
     const isFastEnough =
       Math.abs(this.previousTop - this.currentTop) > this.scrollThreshold;
+
+    if (realNavTop >= 0) {
+      this.navClone.style.display = "none";
+    } else {
+      this.navClone.style.display = "";
+    }
 
     if (this.currentTop >= this.navReal.getBoundingClientRect().height) {
       // Checking can now happen
