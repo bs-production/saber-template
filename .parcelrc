@@ -1,3 +1,4 @@
 {
   "extends": "@parcel/config-default",
+  "namers": ["@bs-production/parcel-namer-scripts-styles", "parcel-namer-rewrite"]
 }
