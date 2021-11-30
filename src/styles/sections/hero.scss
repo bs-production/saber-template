@@ -41,13 +41,13 @@
     }
 
     .hero-content-showcase {
-      @apply aspect-h-6 aspect-w-16 z-[-10]
+      @apply aspect-h-6 aspect-w-16 z-[-10] relative
         min-xl:hidden
         sm:aspect-h-10 sm:aspect-w-16;
       margin-bottom: -25%;
 
       img {
-        @apply object-cover;
+        @apply object-cover absolute inset-0 w-full h-full;
       }
     }
 
