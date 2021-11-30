@@ -160,47 +160,165 @@
         <div class="carousel cred-wrapper">
           <div class="cred-container">
             <div class="cred-slide">
-              <img class="cred-img" src="https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/61859d5c73f29_logo-299-cslb.png" alt="Contractor State License Board Approved">
-            </div>
-            
-            <div class="cred-slide">
-              <img class="cred-img" src="https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/58e2c31ae2dc7_carlsbad-chamber-of-commerce-logo-1.png" alt="Carlsbad Chamber of Commerce">
-            </div>
-
-            <div class="cred-slide">
-              <img class="cred-img" src="https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/5ca281c55f31f_sfs-chamber-large.jpg" alt="Santa Fe Springs Chamber of Commerce">
-            </div>
-
-            <div class="cred-slide">
-              <img class="cred-img" src="https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/5c6ee99c46617_ebb-logo-002.png" alt="Earthquake Brace + Bolt">
-            </div>
-
-            <div class="cred-slide">
-              <img class="cred-img" src="https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/5c6eea0769d98_sdar-square-002.jpg" alt="San Diego Association of Realtors">
-            </div>
-
-            <div class="cred-slide">
-              <img class="cred-img" src="https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/5c6eeb11e3383_ocar-logo-002.jpg" alt="Orange County Realtors Association of Professionals">
+              <picture
+                ><source
+                  srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/carlsbad.prod.avif"
+                  type="image/avif" />
+                <source
+                  srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/carlsbad.prod.webp"
+                  type="image/webp" />
+                <source
+                  srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/carlsbad.prod.jpeg"
+                  type="image/jpg" />
+                <img
+                  src="https://cdn.treehouseinternetgroup.com/cms_images/300/carlsbad.prod.png"
+                  loading="lazy"
+                  class="cred-img"
+                  alt="Carlsbad Chamber of Commerce"
+              /></picture>
             </div>
 
             <div class="cred-slide">
-              <img class="cred-img" src="https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/5c6ef39a215a1_bbb-logo-002.png" alt="Better Business Bureau">
+              <picture
+                ><source srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/sfs.prod.avif" type="image/avif" />
+                <source srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/sfs.prod.webp" type="image/webp" />
+                <source srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/sfs.prod.jpeg" type="image/jpg" />
+                <img
+                  src="https://cdn.treehouseinternetgroup.com/cms_images/300/sfs.prod.jpg"
+                  loading="lazy"
+                  class="cred-img"
+                  alt="Santa Fe Springs Chamber of Commerce"
+              /></picture>
             </div>
 
             <div class="cred-slide">
-              <img class="cred-img" src="https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/59108df723790_tbs-logo.png" alt="Basement Systems Certified Dealer Network Member">
+              <picture
+                ><source srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/ebb.prod.avif" type="image/avif" />
+                <source srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/ebb.prod.webp" type="image/webp" />
+                <source srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/ebb.prod.jpeg" type="image/jpg" />
+                <img
+                  src="https://cdn.treehouseinternetgroup.com/cms_images/300/ebb.prod.png"
+                  loading="lazy"
+                  class="cred-img"
+                  alt="Earthquake Brace + Bolt"
+              /></picture>
             </div>
 
             <div class="cred-slide">
-              <img class="cred-img" src="https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/59108c8ec5ae4_supportworks-logo.jpg" alt="Supportworks Dealer Member">
+              <picture
+                ><source
+                  srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/sdar.prod.avif"
+                  type="image/avif" />
+                <source
+                  srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/sdar.prod.webp"
+                  type="image/webp" />
+                <source srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/sdar.prod.jpeg" type="image/jpg" />
+                <img
+                  src="https://cdn.treehouseinternetgroup.com/cms_images/300/sdar.prod.jpg"
+                  loading="lazy"
+                  class="cred-img"
+                  alt="San Diego Association of Realtors"
+              /></picture>
             </div>
 
             <div class="cred-slide">
-              <img class="cred-img" src="https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/59108d70c9d24_cleanspace-badge.png" alt="Certified CleanSpace Dealer">
+              <picture
+                ><source
+                  srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/ocar.prod.avif"
+                  type="image/avif" />
+                <source
+                  srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/ocar.prod.webp"
+                  type="image/webp" />
+                <source srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/ocar.prod.jpeg" type="image/jpg" />
+                <img
+                  src="https://cdn.treehouseinternetgroup.com/cms_images/300/ocar.prod.jpg"
+                  loading="lazy"
+                  class="cred-img"
+                  alt="Orange County Realtors Association of Professionals"
+              /></picture>
             </div>
 
             <div class="cred-slide">
-              <img class="cred-img" src="https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/1404.jpg" alt="Dun &amp; Bradstreet Credibility Corp.">
+              <picture
+                ><source srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/bbb.prod.avif" type="image/avif" />
+                <source srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/bbb.prod.webp" type="image/webp" />
+                <source srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/bbb.prod.jpeg" type="image/jpg" />
+                <img
+                  src="https://cdn.treehouseinternetgroup.com/cms_images/300/bbb.prod.png"
+                  loading="lazy"
+                  class="cred-img"
+                  alt="Better Business Bureau"
+              /></picture>
+            </div>
+
+            <div class="cred-slide">
+              <picture
+                ><source srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/tbs.prod.avif" type="image/avif" />
+                <source srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/tbs.prod.webp" type="image/webp" />
+                <source srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/tbs.prod.jpeg" type="image/jpg" />
+                <img
+                  src="https://cdn.treehouseinternetgroup.com/cms_images/300/tbs.prod.png"
+                  loading="lazy"
+                  class="cred-img"
+                  alt="Basement Systems Certified Dealer Network Member"
+              /></picture>
+            </div>
+
+            <div class="cred-slide">
+              <picture
+                ><source
+                  srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/supportworks.prod.avif"
+                  type="image/avif" />
+                <source
+                  srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/supportworks.prod.webp"
+                  type="image/webp" />
+                <source
+                  srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/supportworks.prod.jpeg"
+                  type="image/jpg" />
+                <img
+                  src="https://cdn.treehouseinternetgroup.com/cms_images/300/supportworks.prod.jpg"
+                  loading="lazy"
+                  class="cred-img"
+                  alt="Supportworks Dealer Member"
+              /></picture>
+            </div>
+
+            <div class="cred-slide">
+              <picture
+                ><source
+                  srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/cleanspace.prod.avif"
+                  type="image/avif" />
+                <source
+                  srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/cleanspace.prod.webp"
+                  type="image/webp" />
+                <source
+                  srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/cleanspace.prod.jpeg"
+                  type="image/jpg" />
+                <img
+                  src="https://cdn.treehouseinternetgroup.com/cms_images/300/cleanspace.prod.png"
+                  loading="lazy"
+                  class="cred-img"
+                  alt="Certified CleanSpace Dealer"
+              /></picture>
+            </div>
+
+            <div class="cred-slide">
+              <picture
+                ><source
+                  srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/D_and_B.prod.avif"
+                  type="image/avif" />
+                <source
+                  srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/D_and_B.prod.webp"
+                  type="image/webp" />
+                <source
+                  srcset="https://cdn.treehouseinternetgroup.com/cms_images/300/D_and_B.prod.jpeg"
+                  type="image/jpg" />
+                <img
+                  src="https://cdn.treehouseinternetgroup.com/cms_images/300/D_and_B.prod.jpg"
+                  loading="lazy"
+                  class="cred-img"
+                  alt="Dun &amp; Bradstreet Credibility Corp."
+              /></picture>
             </div>
           </div>
         </div>
