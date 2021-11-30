@@ -8,49 +8,55 @@
       <each
         loop="item in [
         {
-          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/58e2c31ae2dc7_carlsbad-chamber-of-commerce-logo-1.png',
+          'url': '../../assets/images/cred/carlsbad.png',
           'alt': 'Carlsbad Chamber of Commerce'
         },
         {
-          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/5ca281c55f31f_sfs-chamber-large.jpg',
+          'url': '../../assets/images/cred/sfs.jpg',
           'alt': 'Santa Fe Springs Chamber of Commerce'
         },
         {
-          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/5c6ee99c46617_ebb-logo-002.png',
+          'url': '../../assets/images/cred/ebb.png',
           'alt': 'Earthquake Brace + Bolt'
         },
         {
-          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/5c6eea0769d98_sdar-square-002.jpg',
+          'url': '../../assets/images/cred/sdar.jpg',
           'alt': 'San Diego Association of Realtors'
         },
         {
-          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/5c6eeb11e3383_ocar-logo-002.jpg',
+          'url': '../../assets/images/cred/ocar.jpg',
           'alt': 'Orange County Realtors Association of Professionals'
         },
         {
-          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/5c6ef39a215a1_bbb-logo-002.png',
+          'url': '../../assets/images/cred/bbb.png',
           'alt': 'Better Business Bureau'
         },
         {
-          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/59108df723790_tbs-logo.png',
+          'url': '../../assets/images/cred/tbs.png',
           'alt': 'Basement Systems Certified Dealer Network Member'
         },
         {
-          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/59108c8ec5ae4_supportworks-logo.jpg',
+          'url': '../../assets/images/cred/supportworks.jpg',
           'alt': 'Supportworks Dealer Member'
         },
         {
-          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/59108d70c9d24_cleanspace-badge.png',
+          'url': '../../assets/images/cred/cleanspace.png',
           'alt': 'Certified CleanSpace Dealer'
         },
         {
-          'url': 'https://cdn.treehouseinternetgroup.com/uploads/affiliations/logo/1404.jpg',
+          'url': '../../assets/images/cred/D_and_B.jpg',
           'alt': 'Dun & Bradstreet Credibility Corp.'
         }
       ]"
       >
         <div class="cred-slide">
-          <img class="cred-img" src="{{ item.url }}" alt="{{ item.alt }}" />
+          <pic
+            width="250px"
+            loading="lazy"
+            class="cred-img"
+            src="{{ item.url }}"
+            alt="{{ item.alt }}"
+          />
         </div>
       </each>
     </div>
