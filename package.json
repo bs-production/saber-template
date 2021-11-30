@@ -12,7 +12,7 @@
     "silent": true,
     "rules": {
       "(.*).html": "$1.html",
-      "(.*).(png|jpg|jpeg|webp|avif|gif)": "assets/$1/$1.$2",
+      "(.*).(png|jpg|jpeg|webp|avif|gif)": "assets/$1/$1.prod.$2",
       "(.*).(svg)": "svgs/$1.svg"
     }
   },
