@@ -5,7 +5,7 @@ Converting Saber foundation's website to new design from Adobe XD design spec
 ## Prerequisites
 
 - Node JS @latest (Preferable)
-- NPM or Yarn @latest (Preferable)
+- Yarn @latest (Preferable) (**NPM causes issues, instead use yarn exclusively**)
 
 ## Run Locally
 
@@ -24,34 +24,16 @@ Converting Saber foundation's website to new design from Adobe XD design spec
 **Install dependencies**
 
 ```bash
-  npm install
-```
-
-_or_
-
-```bash
   yarn
 ```
 
 **Start the dev server**
 
 ```bash
-  npm start
-```
-
-_or_
-
-```bash
   yarn start
 ```
 
 **Reset cache**
-
-```bash
-  npm run clean
-```
-
-_or_
 
 ```bash
   yarn run clean
