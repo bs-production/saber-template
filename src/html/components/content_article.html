@@ -1,905 +1,377 @@
-<div id="content_helper" style="display: none"></div>
-<script
-  type="text/javascript"
-  src="https://www.saberfoundations.com/core/js/jquery.validate.js"
-></script>
-<script type="text/javascript">
-  $(document).ready(function () {
-    jQuery.validator.addMethod(
-      "notEqualTo",
-      function (value, element, param) {
-        return this.optional(element) || value != $(param).val();
-      },
-      "First and last name cannot be the same."
-    );
+<<style>
+  .contact_form {
+    margin: auto;
+    width: 540px;
+  }
 
-    jQuery.validator.addMethod(
-      "zip",
-      function (zip, element) {
-        return this.optional(element) || zip.match(/(^\d{5}(-\d{4})?$)$/);
-      },
-      "Please enter a valid zip code."
-    );
+  .contact_form form {
+    width: 100% !important;
+  }
 
-    jQuery.validator.addMethod(
-      "phone",
-      function (phone, element) {
-        return (
-          this.optional(element) ||
-          phone.match(/^[01]?[- .]?\(?[2-9]\d{2}\)?[- .]?\d{3}[- .]?\d{4}$/)
-        );
-      },
-      "Please enter a valid phone number."
-    );
-    $("#contact_form").validate({
-      rules: {
-        Email_Address: {
-          email: true,
-        },
-        First_Name: {
-          notEqualTo: "#Last_Name",
-        },
-        Zip_Code: {
-          zip: true,
-        },
-        Phone: {
-          phone: true,
-        },
-      },
-    });
-
-    $("#contact_form").submit(function () {
-      if ($("#contact_form").valid() === true) {
-        $("#contact_form .submit").attr("disabled", "disabled");
-      }
-    });
-  });
-</script>
-<style>
-  .service_area.module {
+  .contact_form .bar {
     width: 100%;
+    padding: 3px 0px;
+    font-size: 14px;
     margin-bottom: 10px;
   }
+
+  .contact_form .step {
+    width: 540px;
+    margin-bottom: 15px;
+    border: 2px solid #e4e4e4;
+    display: none;
+  }
+
+  .contact_form .step.step_1 {
+    display: block;
+  }
+
+  .contact_form .step .title {
+    font-weight: bold;
+    font-size: 14px;
+    color: #777777;
+    background-color: #f2f2f2;
+    border-bottom: 2px solid #e4e4e4;
+    padding: 5px 12px;
+  }
+
+  .contact_form .step.current .title {
+    color: #ffffff;
+  }
+
+  .contact_form .step .form_fields {
+    padding: 12px 13px;
+  }
+
+  #content-wrap > .contact_form .step label {
+    width: auto;
+    font-weight: bold;
+  }
+  #content-wrap > .contact_form .step input + label.error {
+    margin-top: -15px;
+    font-size: 12px;
+  }
+  #content-wrap > .contact_form .step label.emergency {
+    float: none;
+    font-weight: normal;
+    display: inline;
+  }
+
+  .contact_form #City-label {
+    clear: left;
+  }
+
+  .contact_form.ca #City {
+    width: 130px;
+  }
+
+  .contact_form.ca #State {
+    width: 180px;
+  }
+
+  .contact_form #Street {
+    width: 200px;
+  }
+
+  .contact_form #Message {
+    width: 300px;
+    height: 150px;
+  }
+
+  .contact_form .next {
+    float: right;
+    margin-top: 20px;
+    padding: 3px 10px;
+  }
+
+  .contact_form .contact_form_outro {
+    padding-left: 10px;
+  }
+  .contact_form .small.privacy {
+    clear: both;
+    padding-top: 20px;
+  }
+  #contact_form > div.step.step_4 > div.form_fields > label.error {
+    display: block !important;
+  }
 </style>
-<div
-  class="citypage_index module"
-  itemscope=""
-  itemtype="https://schema.org/Organization"
->
-  <meta itemprop="name" content="Saber Foundation Repair" />
-  <meta
-    itemprop="image"
-    content="https://cdn.treehouseinternetgroup.com/img/logos/sites/og/300.png"
-  />
-  <div
-    class="location_index module"
-    itemscope=""
-    itemtype="https://schema.org/HomeAndConstructionBusiness"
+<div class="contact_form us">
+  <form
+    action="https://www.saberfoundations.com/free-estimate/confirmation.html"
+    method="post"
+    id="contact_form"
+    novalidate="true"
   >
-    <meta itemprop="parentOrganization" content="Saber Foundation Repair" />
-    <meta itemprop="name" content="Saber Foundation Repair" />
-    <meta
-      itemprop="image"
-      content="https://cdn.treehouseinternetgroup.com/img/logos/sites/og/300.png"
-    />
-    <meta itemprop="telephone" content="1-951-797-7754" />
-    <div
-      class="citypage_address_schema"
-      itemprop="address"
-      itemscope=""
-      itemtype="https://schema.org/PostalAddress"
-    >
-      <meta itemprop="streetAddress" content="930 S Andreasen Dr" />
-      <meta itemprop="addressLocality" content="Escondido" />
-      <meta itemprop="addressRegion" content="CA" />
-      <meta itemprop="postalCode" content="92029" />
-      <meta itemprop="addressCountry" content="US" />
+    <input type="hidden" name="save" value="1" />
+    <h1>Contact Us Today</h1>
+    <div class="bar">
+      Fill out the form below to have Saber Foundation Repair contact you
+      shortly, or call
+      <span id="numberassigned_2" class="mongoose_phone">1-800-922-2488</span>
+      to contact Saber Foundation Repair immediately.
     </div>
-  </div>
-  <div
-    class="location_index module"
-    itemscope=""
-    itemtype="https://schema.org/HomeAndConstructionBusiness"
-  >
-    <meta itemprop="parentOrganization" content="Saber Foundation Repair" />
-    <meta itemprop="name" content="Saber Foundation Repair" />
-    <meta
-      itemprop="image"
-      content="https://cdn.treehouseinternetgroup.com/img/logos/sites/og/300.png"
-    />
-    <meta itemprop="telephone" content="1-562-203-3362" />
-    <div
-      class="citypage_address_schema"
-      itemprop="address"
-      itemscope=""
-      itemtype="https://schema.org/PostalAddress"
-    >
-      <meta itemprop="streetAddress" content="11017 Lockport Pl" />
-      <meta itemprop="addressLocality" content="Santa Fe Springs" />
-      <meta itemprop="addressRegion" content="CA" />
-      <meta itemprop="postalCode" content="90670" />
-      <meta itemprop="addressCountry" content="US" />
-    </div>
-  </div>
-  <div
-    class="reviews_sidebar_widget widget"
-    itemprop="aggregateRating"
-    itemscope=""
-    itemtype="https://schema.org/AggregateRating"
-  >
-    <meta itemprop="reviewCount" content="30" />
-    <meta itemprop="ratingValue" content="4.84" />
-    <span
-      itemprop="itemReviewed"
-      itemscope=""
-      itemtype="https://schema.org/LocalBusiness"
-    >
-      <meta itemprop="name" content="Saber Foundation Repair" />
-      <span
-        itemprop="image"
-        itemscope=""
-        itemtype="https://schema.org/ImageObject"
-      >
-        <meta
-          itemprop="url"
-          content="https://cdn.treehouseinternetgroup.com/img/logos/sites/og/.png"
+    <div class="step step_1 current">
+      <div class="title">Enter your Zip Code</div>
+      <div class="form_fields">
+        <label for="Zip">Your Zip Code: </label>
+        <input
+          id="Zip"
+          class="four_step_zip_field"
+          type="text"
+          name="Zip_Code"
+          pattern="^\d{5}$"
+          data-validate-zip="us"
+          maxlength="10"
+          value=""
+          required=""
         />
-      </span>
-      <meta itemprop="telephone" content="1-951-797-7754" />
-      <span
-        itemprop="address"
-        itemscope=""
-        itemtype="https://schema.org/PostalAddress"
-      >
-        <meta itemprop="streetAddress" content="930 S Andreasen Dr" />
-        <meta itemprop="addressLocality" content="Escondido" />
-        <meta itemprop="addressRegion" content="CA" />
-        <meta itemprop="postalCode" content="92029" />
-        <meta itemprop="addressCountry" content="US" />
-      </span>
-    </span>
-  </div>
-  <div class="citypage_sidebar">
-    <div class="widget widget_contact">
-      <div class="widget_title">
-        <div class="citypage_contact_line1">Contact Us For</div>
-        <div class="citypage_contact_line2">An Estimate!</div>
       </div>
-      <div class="widget_content">
-        <form
-          action="https://www.saberfoundations.com/free-estimate/confirmation.html"
-          method="post"
-          id="contact_form"
-        >
-          <input type="hidden" value="save" name="save" />
-          <div class="fname">
-            <label for="First_Name">First Name: <span>*</span></label>
-            <input
-              autofocus=""
-              type="text"
-              name="First_Name"
-              maxlength="50"
-              class="required"
-              id="First_Name"
-            />
-          </div>
-          <div class="lname">
-            <label for="Last_Name">Last Name: <span>*</span></label>
-            <input
-              type="text"
-              name="Last_Name"
-              maxlength="50"
-              class="required"
-              id="Last_Name"
-            />
-          </div>
-          <div class="address">
-            <label for="Street">Street: <span>*</span></label>
-            <input
-              type="text"
-              name="Street"
-              maxlength="50"
-              class="required"
-              id="Street"
-            />
-          </div>
-          <div class="city">
-            <label for="City">City: <span>*</span></label>
-            <input
-              type="text"
-              name="City"
-              maxlength="50"
-              class="required"
-              value=""
-              id="City"
-            />
-          </div>
-          <div class="state">
-            <label for="State">State: <span>*</span></label>
-          </div>
-          <div class="zip">
-            <label for="Zip_Code">Zip Code: <span>*</span></label>
-            <input
-              type="text"
-              name="Zip_Code"
-              maxlength="10"
-              class="required zipcode"
-              value=""
-              id="Zip"
-            />
-          </div>
-          <div class="phone">
-            <label for="Phone">Phone: <span>*</span></label>
-            <input
-              type="text"
-              name="Phone"
-              maxlength="50"
-              class="required phone"
-              id="Phone"
-            />
-          </div>
-          <div class="email">
-            <label for="Email_Address">Email: <span>*</span></label>
-            <input
-              type="text"
-              name="Email_Address"
-              maxlength="50"
-              class="required email"
-              id="Email_Address"
-            />
-          </div>
-
-          <div class="what-prompted">
-            <label for="lead_what_prompted_id"
-              >What prompted you to contact us today?</label
-            >
-            <input
-              type="hidden"
-              id="lead_what_prompted_response"
-              name="What_Prompted_Response"
-              value=""
-            />
-            <select
-              id="lead_what_prompted_id"
-              name="What_Prompted_Id"
-              class="required"
-            >
-              <option value="">Please select...</option>
-              <option value="21">Door Hanger</option>
-              <option value="1">Referral</option>
-              <option value="2">Previous Customer</option>
-              <option value="3">Internet / Web Search</option>
-              <option value="4">TV</option>
-              <option value="5">Radio</option>
-              <option value="6">Mail</option>
-              <option value="7">Other</option>
-            </select>
-          </div>
-          <div id="display_lead_what_prompted_followup"></div>
-          <div class="comment">
-            <label for="Message">Questions and comments: </label>
-            <textarea name="Message" id="Message"></textarea>
-          </div>
-          <div class="submit">
-            <input
-              class="submit"
-              name="save"
-              type="submit"
-              value="Get Started Today!"
-              id="save"
-            />
-          </div>
-        </form>
-      </div>
+      <button class="next" onclick="contactFormNextStep(); return false;">
+        Continue »
+      </button>
     </div>
-    <div class="widget widget_services">
-      <div class="widget_title">Products &amp; Services</div>
-      <div class="widget_content">
-        <div class="widget_scroll">
-          <div class="widget_tags_category">
-            Crawl Space Repair Services &amp; Products
-          </div>
-          <div class="widget_tags_item">
-            CleanSpace Crawl Space Encapsulation Vapor Barriers &amp; Liners
-          </div>
-          <div class="widget_tags_item">Turtl Access Hatch</div>
-          <div class="widget_tags_item">EverLast Crawl Space Doors</div>
-          <div class="widget_tags_item">Sanidry Crawl Space Dehumidifiers</div>
-          <div class="widget_tags_item">SmartDrain Water Drainage</div>
-          <div class="widget_tags_item">SilverGlo Wall Insulation</div>
-          <div class="widget_tags_item">TerraBlock Floor Insulation</div>
-          <div class="widget_tags_item">SmartSump Sump Pump</div>
-          <div class="widget_tags_item">WallCap Block Wall Sealer</div>
-          <div class="widget_tags_item">SmartVent Flood Vents</div>
-          <p>&nbsp;</p>
-          <div class="widget_tags_category">
-            Foundation Repair Services &amp; Products
-          </div>
-          <div class="widget_tags_item">
-            Push Pier Underpinning For Settlement, Foundation Leveling, Sinking
-            Foundation Repair
-          </div>
-          <div class="widget_tags_item">Concrete Slab Crack Repair</div>
-          <div class="widget_tags_item">Geo-lock Wall Anchors</div>
-          <div class="widget_tags_item">Geo-lock Helical Anchors</div>
-          <div class="widget_tags_item">PowerBrace Bowed Wall Repair</div>
-          <div class="widget_tags_item">CarbonArmor Fiber Wall Repair</div>
-          <div class="widget_tags_item">SmartJack Crawl Space Support</div>
-          <div class="widget_tags_item">Slab Pier Repair</div>
-          <div class="widget_tags_item">
-            PolyLevel Concrete Lifting &amp; Leveling
-          </div>
-          <div class="widget_tags_item">
-            Mudjacking &amp; Slabjacking Alternatives
-          </div>
-          <div class="widget_tags_item">Pool Deck Repair</div>
-          <div class="widget_tags_item">Concrete Sidewalk Repair</div>
-          <div class="widget_tags_item">Concrete Driveway Repair</div>
-          <div class="widget_tags_item">Shotcrete Wall Restoration</div>
-          <div class="widget_tags_item">Earthquake Seismic Retrofitting</div>
-          <div class="widget_tags_item">Seawall Repair</div>
-          <div class="widget_tags_item">Bulkhead Repair</div>
-          <div class="widget_tags_item">Retaining Wall Repair</div>
-          <p>&nbsp;</p>
-        </div>
+    <div class="step step_2">
+      <div class="title">Address Information</div>
+      <div class="form_fields">
+        <label id="Street-label" for="Street">Street:</label>
+        <input
+          id="Street"
+          required=""
+          type="text"
+          name="Street"
+          maxlength="300"
+        />
+        <label id="City-label" for="City">City and State:</label>
+        <input
+          id="City"
+          required=""
+          type="text"
+          name="City"
+          maxlength="255"
+          value=""
+        />
+        <select name="State" id="State" required="">
+          <option value="">Please select...</option>
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">District of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
       </div>
+      <button class="next" onclick="contactFormNextStep(); return false;">
+        Continue »
+      </button>
     </div>
+    <div class="step step_3">
+      <div class="title">Contact Information</div>
+      <div class="form_fields">
+        <label id="First_Name-label" for="First_Name">Your First Name: </label>
+        <input
+          id="First_Name"
+          required=""
+          type="text"
+          name="First_Name"
+          maxlength="50"
+          data-validate-name=""
+        />
+        <br />
+        <label id="Last_Name-label" for="Last_Name">Your Last Name: </label>
+        <input
+          id="Last_Name"
+          required=""
+          type="text"
+          name="Last_Name"
+          maxlength="50"
+          data-validate-notequal="#First_Name"
+          data-validate-name=""
+        />
+        <br />
+        <label id="Phone-label" for="Phone">Your Phone Number: </label>
+        <input
+          id="Phone"
+          type="text"
+          name="Phone"
+          pattern="^[01]?[- .]?\(?[2-9]\d{2}\)?[- .]?\d{3}[- .]?\d{4}$"
+          data-validate-phone="us"
+          required=""
+        />
+        <br />
+        <label id="Email_Address-label" for="Email_Address"
+          >Your Email Address:
+        </label>
+        <input
+          id="Email_Address"
+          type="email"
+          name="Email_Address"
+          maxlength="200"
+          pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$"
+          title="Please enter a valid email address."
+          required=""
+        />
 
-    <div class="before_after_sidebar_widget widget">
-      <div class="widget_title">Before and After Pictures from Compton</div>
-      <div class="widget_items">
-        <div class="widget_item" id="tabs_0">
-          <div class="widget_item_thumb">
-            <a
-              class="colorlink cboxElement"
-              rel="before_after"
-              href="#before_after_0"
-            >
-              <img
-                style="width: 80px; height: 75px"
-                src="https://cdn.treehouseinternetgroup.com/uploads/before_after/3392/thumb/5aa1876c2bf5b_c5d6c3f1-6e20-4bd8-8e98-b70acb4b2a52.jpg"
-                alt="Smart Jacks in Compton, Ca"
-                data-zoom-src="https://cdn.treehouseinternetgroup.com/uploads/before_after/3392/medium/5aa1876a8c677_ebf89306-3c4e-4927-b68c-d7803a2fdc21-1.jpg"
-              />
-            </a>
-          </div>
-          <div class="widget_item_title">Smart Jacks in Compton, Ca</div>
-          <div class="widget_item_text">
-            <div class="more">
-              <a
-                class="colorlink cboxElement"
-                rel="before-after"
-                href="#before_after_0"
-              >
-                View Details
-              </a>
-            </div>
-          </div>
-        </div>
-        <div style="display: none">
-          <div id="before_after_0" style="width: 620px">
-            <h3>Smart Jacks in Compton, Ca</h3>
-            <table class="before_after_table">
-              <tbody>
-                <tr>
-                  <th>Before</th>
-                  <th>After</th>
-                </tr>
-                <tr>
-                  <td>
-                    <img
-                      width="300px"
-                      src="https://cdn.treehouseinternetgroup.com/uploads/before_after/3392/medium/5aa1876a8c677_ebf89306-3c4e-4927-b68c-d7803a2fdc21-1.jpg"
-                      alt="Smart Jacks in Compton, Ca"
-                    />
-                  </td>
-                  <td>
-                    <img
-                      width="300px"
-                      src="https://cdn.treehouseinternetgroup.com/uploads/before_after/3392/medium/5aa1876c2bf5b_c5d6c3f1-6e20-4bd8-8e98-b70acb4b2a52.jpg"
-                      alt="Smart Jacks in Compton, Ca"
-                    />
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <p></p>
-            <p>
-              The Before picture shows a old wood post that is failing to
-              support this home's floor.
-            </p>
-            <p>
-              The After picture shows Saber adding new Smart Jacks to fix and
-              stabilize the sagging floor issue.
-            </p>
-            <p></p>
-          </div>
-        </div>
-      </div>
-      <div class="widget_controls">
-        <div class="widget_more">
-          <a
-            href="https://www.saberfoundations.com/about-us/before-after.html"
-            title="See All Before &amp; After Images"
-            >See All Before &amp; After Images</a
+        <div class="what-prompted">
+          <label for="lead_what_prompted_id"
+            >What prompted you to contact us today?</label
           >
+          <input
+            type="hidden"
+            id="lead_what_prompted_response"
+            name="What_Prompted_Response"
+            value=""
+          />
+          <select
+            id="lead_what_prompted_id"
+            name="What_Prompted_Id"
+            data-validate-select-one=""
+            required=""
+          >
+            <option value="">Please select...</option>
+            <option value="21">Door Hanger</option>
+            <option value="1">Referral</option>
+            <option value="2">Previous Customer</option>
+            <option value="3">Internet / Web Search</option>
+            <option value="4">TV</option>
+            <option value="5">Radio</option>
+            <option value="6">Mail</option>
+            <option value="7">Other</option>
+          </select>
         </div>
+        <div id="display_lead_what_prompted_followup"></div>
+        <!-- <script>
+          (function () {
+            document
+              .querySelector("#lead_what_prompted_id")
+              .addEventListener("change", function (e) {
+                document.querySelector(
+                  "#display_lead_what_prompted_followup"
+                ).style.display = "none";
+                document.querySelector(
+                  "#display_lead_what_prompted_followup"
+                ).innerHTML = "";
+                switch (e.target.value) {
+                  case "21":
+                    document.querySelector(
+                      "#lead_what_prompted_response"
+                    ).value = "Door Hanger";
+                    break;
+                  case "1":
+                    document.querySelector(
+                      "#lead_what_prompted_response"
+                    ).value = "Referral";
+                    document.querySelector(
+                      "#display_lead_what_prompted_followup"
+                    ).style.display = "block";
+                    document.querySelector(
+                      "#display_lead_what_prompted_followup"
+                    ).innerHTML =
+                      '<label style="width:100%" id="lead_what_prompted_followup-label" for="lead_what_prompted_followup">Would you mind including their name so we can thank them?</label><input id="lead_what_prompted_followup" type="text" name="What_Prompted_Comment" maxlength="255" />';
+                    break;
+                  case "2":
+                    document.querySelector(
+                      "#lead_what_prompted_response"
+                    ).value = "Previous Customer";
+                    break;
+                  case "3":
+                    document.querySelector(
+                      "#lead_what_prompted_response"
+                    ).value = "Internet / Web Search";
+                    break;
+                  case "4":
+                    document.querySelector(
+                      "#lead_what_prompted_response"
+                    ).value = "TV";
+                    break;
+                  case "5":
+                    document.querySelector(
+                      "#lead_what_prompted_response"
+                    ).value = "Radio";
+                    break;
+                  case "6":
+                    document.querySelector(
+                      "#lead_what_prompted_response"
+                    ).value = "Mail";
+                    break;
+                  case "7":
+                    document.querySelector(
+                      "#lead_what_prompted_response"
+                    ).value = "Other";
+                    document.querySelector(
+                      "#display_lead_what_prompted_followup"
+                    ).style.display = "block";
+                    document.querySelector(
+                      "#display_lead_what_prompted_followup"
+                    ).innerHTML =
+                      '<label style="width:100%" id="lead_what_prompted_followup-label" for="lead_what_prompted_followup">Tell us how you heard about us:</label><textarea style="width:100%" id="lead_what_prompted_followup" name="What_Prompted_Comment" rows="4" cols="50" maxlength="2000"></textarea>';
+                    break;
+                  default:
+                    document.querySelector(
+                      "#lead_what_prompted_response"
+                    ).value = "";
+                }
+              });
+          })();
+        </script> -->
       </div>
+
+      <button class="next" onclick="contactFormNextStep(); return false;">
+        Continue »
+      </button>
     </div>
-
-    <div class="widget widget_awards">
-      <div class="widget_title">Company Awards</div>
-      <div class="widget_content">
-        <div class="widget_item">
-          <div class="widget_thumbnail">
-            <a
-              href="https://www.saberfoundations.com/about-us/awards/3888-saber-recognized-as-10th-top-foundation-dealer-in-supportworks-network.html"
-              ><img
-                alt="Saber Recognized as 10th Top Foundation Dealer in Supportworks Network"
-                title="Saber Recognized as 10th Top Foundation Dealer in Supportworks Network"
-                src="https://cdn.treehouseinternetgroup.com/uploads/awards/3392/thumb/5ad678cf4e0d6_award-10.jpg"
-            /></a>
-          </div>
-          <div class="widget_item_title">
-            <a
-              href="https://www.saberfoundations.com/about-us/awards/3888-saber-recognized-as-10th-top-foundation-dealer-in-supportworks-network.html"
-            >
-              Saber Recognized as 10th Top Foundation Dealer in Supportworks
-              Network
-            </a>
-          </div>
-          <div class="widget_preview">
-            Saber was ranked 10th of Top 75 Foundation Dealers in the
-            Supportworks network at the Redefine 2018 conference in Omaha,...
-            <a
-              href="https://www.saberfoundations.com/about-us/awards/3888-saber-recognized-as-10th-top-foundation-dealer-in-supportworks-network.html"
-            >
-              [Read more]
-            </a>
-          </div>
-        </div>
-
-        <div class="widget_item">
-          <div class="widget_thumbnail">
-            <a
-              href="https://www.saberfoundations.com/about-us/awards/3889-saber-ranks-7th-in-push-pier-installations-in-supportworks-network.html"
-              ><img
-                alt="Saber Ranks 7th in Push Pier Installations in Supportworks Network"
-                title="Saber Ranks 7th in Push Pier Installations in Supportworks Network"
-                src="https://cdn.treehouseinternetgroup.com/uploads/awards/3392/thumb/5ad67bf50fc60_award-7.jpg"
-            /></a>
-          </div>
-          <div class="widget_item_title">
-            <a
-              href="https://www.saberfoundations.com/about-us/awards/3889-saber-ranks-7th-in-push-pier-installations-in-supportworks-network.html"
-            >
-              Saber Ranks 7th in Push Pier Installations in Supportworks Network
-            </a>
-          </div>
-          <div class="widget_preview">
-            Saber was recognized for being 7th in the Supportworks network for
-            push pier installations....
-            <a
-              href="https://www.saberfoundations.com/about-us/awards/3889-saber-ranks-7th-in-push-pier-installations-in-supportworks-network.html"
-            >
-              [Read more]
-            </a>
-          </div>
-        </div>
-
-        <div class="widget_item">
-          <div class="widget_thumbnail">
-            <a
-              href="https://www.saberfoundations.com/about-us/awards/3297-13th-in-total-sales-out-of-whole-dealer-network-2016.html"
-              ><img
-                alt="13th in Total Sales Out of Whole Dealer Network 2016"
-                title="13th in Total Sales Out of Whole Dealer Network 2016"
-                src="https://cdn.treehouseinternetgroup.com/uploads/awards/3392/thumb/59109697caf6f_rightside-right-award1.jpg"
-            /></a>
-          </div>
-          <div class="widget_item_title">
-            <a
-              href="https://www.saberfoundations.com/about-us/awards/3297-13th-in-total-sales-out-of-whole-dealer-network-2016.html"
-            >
-              13th in Total Sales Out of Whole Dealer Network 2016
-            </a>
-          </div>
-          <div class="widget_preview">
-            ...
-            <a
-              href="https://www.saberfoundations.com/about-us/awards/3297-13th-in-total-sales-out-of-whole-dealer-network-2016.html"
-            >
-              [Read more]
-            </a>
-          </div>
-        </div>
-
-        <a
-          href="https://www.saberfoundations.com/about-us/awards.html"
-          title="See all awards"
-        >
-          More Awards
-        </a>
+    <div class="step step_4">
+      <div class="title">About Your Project</div>
+      <div class="form_fields">
+        <label id="Message-label" for="Message">Describe your concerns</label>
+        <textarea id="Message" type="text" name="Message"></textarea>
       </div>
+      <input class="next" type="submit" value="Send" />
     </div>
-  </div>
-  <h1>
-    Expert Foundation Repair &amp; Concrete Leveling Contractor Serving Compton,
-    CA
-  </h1>
-
-  <p>
-    Saber Foundation Repair has been the local specialist in Compton, CA for
-    foundation repair, seismic retrofitting, crawl space repair, and concrete
-    lifting and leveling since 1987. We install quality products that are the
-    long lasting solution to your home's problem. Call us to schedule a free in
-    home inspection and estimate!
-  </p>
-  <div class="citypage_testimonial_main">
-    <div class="text">Eamon was great!...<span></span></div>
-    <div class="author">
-      <a
-        href="https://www.saberfoundations.com/about-us/testimonials/72479-compton-ca.html"
-        >Testimonial from Tracy from Compton, CA</a
-      >
-    </div>
-  </div>
-
-  <div class="citypage_company_descripton"></div>
-  <div class="citypage_main_content">
-    <div class="citypage_2col_widget_wrapper"></div>
-
-    <div class="citypage_text_generated_content">
-      <style>
-        #service-area {
-          display: none;
-        }
-      </style>
-      <h2>Customized foundation repair for Compton, CA</h2>
-      <p>
-        Every foundation problem is unique, just like our foundation repair
-        solutions. Saber Foundation Repair is your proven Supportworks dealer
-        for Compton, CA, we know what's best for your home. We do free, no
-        obligation in home inspections to recommend the best solution for your
-        bowing or cracked walls.
-      </p>
-      <p>Proof that your home needs foundation repairs:</p>
-      <ul>
-        <li>Buckling walls</li>
-        <li>Foundation cracks</li>
-        <li>Uneven floors</li>
-        <li>Collapsing retaining walls</li>
-        <li>Windows and doors that frequently get stuck</li>
-      </ul>
-      <h2>Seismic retrofitting safeguards your Compton home</h2>
-      <p>
-        Southern California homes are subject to earthquakes, so why not reduce
-        the damage? Seismic retrofitting is a good investment that will
-        strengthen your home's weakest points. We use specially designed
-        hardware like anchors and framing angles to reinforce your Compton home.
-        Saber Foundation Repair can easily install the system in just 1-2 days.
-      </p>
-      <div class="center">
-        <a
-          class="button"
-          href="https://www.saberfoundations.com/free-estimate.html"
-          >Get a Free Quote!</a
-        >
-      </div>
-      <h2>
-        Choose Polylevel over mudjacking for your southern Californian home
-      </h2>
-      <p>
-        PolyLevel® is a polyurethane foam that can raise anything from your
-        walkways to your pool decks. Saber Foundation Repair prefers PolyLevel®
-        because it is lighter, requires smaller injection holes, lasts longer
-        than mudjacking, and is environmentally safe. PolyLevel® cures in just
-        15 minutes, making it a quick and long-lasting solution to your problem.
-      </p>
-      <h2>Encapsulate your Compton crawl space</h2>
-      <p>
-        Encapsulating your crawl space has more benefits than one might think.
-        Encapsulation not only keeps out moisture, which can lead to mold and
-        foul odors, but also reduces allergies and asthma symptoms. Saber
-        Foundation Repair specializes in encapsulation and structural repairs
-        for your crawl space. Our products were specially designed for
-        durability.
-      </p>
-      <p>
-        Saber Foundation Repair is the foundation repair, concrete lifting and
-        leveling, seismic retrofitting, and crawl space repair expert for
-        Compton, CA. Contact us today for a free in home inspection and no
-        obligation quote!
-      </p>
-      <div class="center">
-        <a
-          class="button"
-          href="https://www.saberfoundations.com/free-estimate.html"
-          >Get a Free Quote!</a
-        >
-      </div>
-    </div>
-
-    <div class="widget photo_gallery_widget">
-      <div class="widget_title">Photo Galleries From Compton</div>
-      <div class="widget_content">
-        <div class="widget_item">
-          <div class="photo_gallery_thumb">
-            <a
-              href="https://www.saberfoundations.com/foundation-repair/photo-gallery/176367-5abd4e278ca52d2e55763-8e8d-4729-b4bb-2f01c45c0239-1.html"
-            >
-              <img
-                src="https://cdn.treehouseinternetgroup.com/uploads/photo_gallery/thumb/176367-5abd4e278ca52_d2e55763-8e8d-4729-b4bb-2f01c45c0239-1.jpg?v=1522416100"
-                alt="This is a picture of a all metal Smart Jack that is used to help lift and support a home."
-              />
-            </a>
-          </div>
-          <div class="widget_item_preview">
-            This is a picture of a all metal Smart Jack that is used to help
-            lift and support a home.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="widget widget_work_requests">
-      <div class="widget_title">Work Requests From Compton, CA</div>
-      <div class="widget_content" style="max-height: 300px; overflow-y: scroll">
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">
-                I believe we have a foundation issue..the wall in the bedroom
-                has a crack and the floor is starting to slope
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">
-                Front porch step is cracked. Small pieces of cement are missing.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">
-                My house is not leveled. I can see cracks along the foundation
-                outer wall.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">
-                I have sloping floors and would like to get on your schedule for
-                an estimate. Thanks!
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">Crawlspace encapsulation</div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">Comment: Service Poly</div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">Concered about the foundation sloping</div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">
-                We have several large cracks in our walls and ceiling in our
-                offices.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">
-                Slab foundation is cracking in kitchen and living room
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">Comment: Service Poly</div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">
-                Spanish-style home built in 1930's. Interior walls/ceilings
-                showing cracks.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">
-                Pillars holding up house some are cracked and floor uneven
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments"></div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">
-                I NEED NEW CRAWLSPACE COVERS INSTALLED OUTSIDE OF THE HOUSE AT
-                THE FOUNDATION
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">
-                We Have Sloping wood floors and would like to get to the root of
-                the problem.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">
-                Cracks in foundation, found after home inspection.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">
-                Remove garage wall install 13' x 8' garage door, garage floor is
-                lower than outside existing concrete drive way. outside concrete
-                drive way slab is 13' x 15' the height on one end of the slab
-                start at 2"3/4 high and rises to 4" in height. I would like to
-                remove this bump and make it level
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">
-                Cracks in my garage floor water draining inside
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">Foundation and warped floor</div>
-            </div>
-          </div>
-        </div>
-        <div class="widget_item">
-          <div class="widget_item_content">
-            <div class="citypage-job-item">
-              <b>Project Location: </b> <i><small>Compton, CA</small></i
-              ><br />
-
-              <div class="comments">
-                Would like an estimate on leveling and bolting.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div style="margin: 0 0 10px 10px">
-        <a
-          href="https://www.saberfoundations.com/service-area/compton-ca/work-requests.html"
-          >See all work requests</a
-        >
-      </div>
-    </div>
-    <div class="widget widget_citypage_list">
-      <div class="widget_title">
-        Serving the following Compton, CA zip codes
-      </div>
-      <div class="widget_content">
-        90220, 90221, 90222, 90223, 90224, 90220, 90221, 90222, 90223, 90224
-      </div>
-    </div>
-  </div>
+  </form>
 </div>
+>
