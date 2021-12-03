@@ -23,7 +23,7 @@
     "parcel:build": "parcel build src/html/pages/*.html --no-source-maps",
     "clean": "rm -rf dist .parcel-cache",
     "build": "npm-run-all -s clean parcel:build prod:build",
-    "start": "npm-run-all -s clean -p parcel:serve",
+    "dev": "npm-run-all -s clean -p parcel:serve",
     "parcel": "parcel"
   },
   "devDependencies": {
