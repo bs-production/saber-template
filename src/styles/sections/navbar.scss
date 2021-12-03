@@ -30,7 +30,7 @@
     box-shadow: 0px 3px 13px #00000029;
   }
 
-  @screen sm {
+  @screen md {
     grid-template-columns:
       minmax(theme("spacing.8"), auto)
       1fr
