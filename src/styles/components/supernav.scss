@@ -2,11 +2,11 @@
   @apply col-start-3 col-end-4 row-start-2 row-end-3 py-2 flex flex-col justify-center;
 
   .level-1.large {
-    @apply flex justify-end md:hidden space-x-16
-      xl:space-x-10;
+    @apply flex justify-end lg:hidden space-x-12
+      xl:space-x-8;
 
     > li {
-      @apply font-semibold relative py-4 lg:text-sm;
+      @apply font-semibold relative py-4 lg:text-xs whitespace-nowrap;
 
       a {
         @apply hover:underline cursor-pointer;
@@ -172,7 +172,7 @@
   }
 
   .menu-button-container {
-    @apply hidden md:flex md:justify-end;
+    @apply hidden lg:flex lg:justify-end;
 
     .menu-button {
       @apply px-5 py-3 -mr-5;
